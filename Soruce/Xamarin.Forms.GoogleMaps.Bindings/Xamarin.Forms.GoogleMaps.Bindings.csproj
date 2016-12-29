@@ -8,7 +8,7 @@
     <ProjectGuid>{C3233A50-8A66-497D-BBEC-FD4A01E298BA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Xamarin.Forms.GoogleMaps</RootNamespace>
+    <RootNamespace>Xamarin.Forms.GoogleMaps.Bindings</RootNamespace>
     <AssemblyName>Xamarin.Forms.GoogleMaps.Bindings</AssemblyName>
     <DefaultLanguage>ja-JP</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="BehaviorBase.cs" />
+    <Compile Include="BindingVisibleRegionBehavior.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

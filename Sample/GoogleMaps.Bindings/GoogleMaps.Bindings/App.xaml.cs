@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
+using Xamarin.Forms.GoogleMaps.Bindings;
 
 namespace GoogleMaps.Bindings
 {
@@ -12,6 +13,8 @@ namespace GoogleMaps.Bindings
         public App()
         {
             InitializeComponent();
+
+            var behavior = new BindingVisibleRegionBehavior();
 
             MainPage = new NavigationPage(new MainPage());
         }

@@ -2,10 +2,20 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:googleMaps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             xmlns:bindings="clr-namespace:Xamarin.Forms.GoogleMaps.Bindings;assembly=Xamarin.Forms.GoogleMaps.Bindings"
+             xmlns:viewModels="clr-namespace:GoogleMaps.Bindings.ViewModels;assembly=GoogleMaps.Bindings"
              x:Class="GoogleMaps.Bindings.Views.VisibleRegionPage"
              Title="Visible Region">
+  <ContentPage.BindingContext>
+    <viewModels:VisibleRegionPageViewModel/>
+  </ContentPage.BindingContext>
   <StackLayout HorizontalOptions="Fill" VerticalOptions="Fill" Spacing="5">
-    <Label Text="Location" />
-    <googleMaps:Map HorizontalOptions="Fill" VerticalOptions="FillAndExpand"/>
+    <Label Text="Location(Direct)" />
+    <Label x:Name="DirectLocationText"/>
+    <googleMaps:Map x:Name="MyMap" HorizontalOptions="Fill" VerticalOptions="FillAndExpand">
+      <googleMaps:Map.Behaviors>
+        <bindings:BindingVisibleRegionBehavior/>
+      </googleMaps:Map.Behaviors>
+    </googleMaps:Map>
   </StackLayout>
 </ContentPage>
