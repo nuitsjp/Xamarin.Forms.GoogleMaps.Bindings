@@ -3,9 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:GoogleMaps.Bindings"
              x:Class="GoogleMaps.Bindings.MainPage">
-
-  <Label Text="Welcome to Xamarin Forms!"
-           VerticalOptions="Center"
-           HorizontalOptions="Center" />
-
+  <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+    <Button Text="VisibleRegion" Clicked="NavigateVisibleRegion"></Button>
+  </StackLayout>
 </ContentPage>

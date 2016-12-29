@@ -1,6 +1,7 @@
 ﻿{
   "dependencies": {
-    "Xamarin.Forms": "2.1.0.6529"
+    "Xamarin.Forms": "2.3.3.175",
+    "Xamarin.Forms.GoogleMaps": "1.7.0"
   },
   "frameworks": {
     "uap10.0": {}

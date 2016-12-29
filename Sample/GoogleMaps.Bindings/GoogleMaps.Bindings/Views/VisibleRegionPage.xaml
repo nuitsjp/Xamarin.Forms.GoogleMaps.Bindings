@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:googleMaps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             x:Class="GoogleMaps.Bindings.Views.VisibleRegionPage"
+             Title="Visible Region">
+  <StackLayout HorizontalOptions="Fill" VerticalOptions="Fill" Spacing="5">
+    <Label Text="Location" />
+    <googleMaps:Map HorizontalOptions="Fill" VerticalOptions="FillAndExpand"/>
+  </StackLayout>
+</ContentPage>

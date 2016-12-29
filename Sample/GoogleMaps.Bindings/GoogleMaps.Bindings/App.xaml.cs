@@ -13,7 +13,7 @@ namespace GoogleMaps.Bindings
         {
             InitializeComponent();
 
-            MainPage = new GoogleMaps.Bindings.MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
