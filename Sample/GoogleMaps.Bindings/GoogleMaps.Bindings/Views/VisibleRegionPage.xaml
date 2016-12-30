@@ -5,7 +5,7 @@
              xmlns:bindings="clr-namespace:Xamarin.Forms.GoogleMaps.Bindings;assembly=Xamarin.Forms.GoogleMaps.Bindings"
              xmlns:viewModels="clr-namespace:GoogleMaps.Bindings.ViewModels;assembly=GoogleMaps.Bindings"
              x:Class="GoogleMaps.Bindings.Views.VisibleRegionPage"
-             Title="Visible Destination">
+             Title="Visible Region">
   <ContentPage.BindingContext>
     <viewModels:VisibleRegionPageViewModel/>
   </ContentPage.BindingContext>
@@ -27,7 +27,7 @@
     <Button Text="Move to Tokyo" Command="{Binding MoveToTokyoCommand}"/>
     <googleMaps:Map x:Name="MyMap" HorizontalOptions="Fill" VerticalOptions="FillAndExpand">
       <googleMaps:Map.Behaviors>
-        <bindings:BindingVisibleRegionBehavior Value="{Binding VisibleRegion, Mode=TwoWay}"/>
+        <bindings:BindingVisibleRegionBehavior Value="{Binding VisibleRegion}"/>
         <bindings:MoveToRegionBehavior Request="{Binding Request}"/>
       </googleMaps:Map.Behaviors>
     </googleMaps:Map>

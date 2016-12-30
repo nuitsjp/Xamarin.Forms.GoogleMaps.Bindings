@@ -8,9 +8,10 @@ namespace Xamarin.Forms.GoogleMaps.Bindings
         private static readonly BindablePropertyKey ValuePropertyKey = BindableProperty.CreateReadOnly("Value", typeof(MapSpan), typeof(BindingVisibleRegionBehavior), default(MapSpan));
 
         public static readonly BindableProperty ValueProperty = ValuePropertyKey.BindableProperty;
-        private MapSpan Value
+        public MapSpan Value
         {
-            set { SetValue(ValuePropertyKey, value); }
+            get { return (MapSpan)GetValue(ValueProperty); }
+            private set { SetValue(ValuePropertyKey, value); }
         }
 
         protected override void OnAttachedTo(Map bindable)
