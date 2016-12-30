@@ -1,14 +1,9 @@
-﻿using GoogleMaps.Bindings.Views;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using Xamarin.Forms;
 
-namespace GoogleMaps.Bindings
+namespace GoogleMaps.Bindings.Views
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage
     {
         public MainPage()
         {

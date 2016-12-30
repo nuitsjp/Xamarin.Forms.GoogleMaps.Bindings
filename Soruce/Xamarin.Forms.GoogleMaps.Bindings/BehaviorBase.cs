@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Xamarin.Forms.GoogleMaps
+namespace Xamarin.Forms.GoogleMaps.Bindings
 {
     public class BehaviorBase<T> : Behavior<T> where T : BindableObject
     {

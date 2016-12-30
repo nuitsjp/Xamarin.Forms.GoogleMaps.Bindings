@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿using GoogleMaps.Bindings.Views;
 using Xamarin.Forms;
-using Xamarin.Forms.GoogleMaps.Bindings;
 
 namespace GoogleMaps.Bindings
 {
-    public partial class App : Application
+    public partial class App
     {
         public App()
         {
