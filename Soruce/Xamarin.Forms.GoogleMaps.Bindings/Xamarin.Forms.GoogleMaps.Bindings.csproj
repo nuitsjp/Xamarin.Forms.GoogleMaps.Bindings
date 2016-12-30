@@ -38,6 +38,9 @@
   <ItemGroup>
     <Compile Include="BehaviorBase.cs" />
     <Compile Include="BindingVisibleRegionBehavior.cs" />
+    <Compile Include="MoveToRegionBehavior.cs" />
+    <Compile Include="MoveToRegionRequestedEventArgs.cs" />
+    <Compile Include="MoveToRegionRequest.cs" />
     <Compile Include="PreserveAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

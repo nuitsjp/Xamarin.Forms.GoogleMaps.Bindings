@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:GoogleMaps.Bindings"
              x:Class="GoogleMaps.Bindings.MainPage">
   <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-    <Button Text="VisibleRegion" Clicked="NavigateVisibleRegion"></Button>
+    <Button Text="DestinationRegion" Clicked="NavigateVisibleRegion"></Button>
   </StackLayout>
 </ContentPage>

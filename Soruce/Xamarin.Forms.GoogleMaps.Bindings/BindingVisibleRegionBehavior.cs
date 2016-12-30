@@ -5,16 +5,12 @@ namespace Xamarin.Forms.GoogleMaps.Bindings
     [Preserve(AllMembers = true)]
     public class BindingVisibleRegionBehavior : BehaviorBase<Map>
     {
-        public static readonly BindableProperty ValueProperty = BindableProperty.Create("Value", typeof(MapSpan), typeof(BindingVisibleRegionBehavior), default(MapSpan), propertyChanged:OnValueChanged);
+        public static readonly BindableProperty ValueProperty = BindableProperty.Create("Value", typeof(MapSpan), typeof(BindingVisibleRegionBehavior), default(MapSpan), BindingMode.OneWayToSource);
 
         public MapSpan Value
         {
             get { return (MapSpan)GetValue(ValueProperty); }
             set { SetValue(ValueProperty, value); }
-        }
-
-        public BindingVisibleRegionBehavior()
-        {
         }
 
         protected override void OnAttachedTo(Map bindable)
@@ -36,15 +32,5 @@ namespace Xamarin.Forms.GoogleMaps.Bindings
                 Value = AssociatedObject.VisibleRegion;
             }
         }
-
-        private static void OnValueChanged(BindableObject bindable, object oldValue, object newValue)
-        {
-            var behavior = (BindingVisibleRegionBehavior)bindable;
-            if (behavior.AssociatedObject == null)
-            {
-                return;
-            }
-        }
-
     }
 }

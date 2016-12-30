@@ -5,18 +5,30 @@
              xmlns:bindings="clr-namespace:Xamarin.Forms.GoogleMaps.Bindings;assembly=Xamarin.Forms.GoogleMaps.Bindings"
              xmlns:viewModels="clr-namespace:GoogleMaps.Bindings.ViewModels;assembly=GoogleMaps.Bindings"
              x:Class="GoogleMaps.Bindings.Views.VisibleRegionPage"
-             Title="Visible Region">
+             Title="Visible Destination">
   <ContentPage.BindingContext>
     <viewModels:VisibleRegionPageViewModel/>
   </ContentPage.BindingContext>
   <StackLayout HorizontalOptions="Fill" VerticalOptions="Fill" Spacing="5">
-    <Label Text="Location(Direct)" />
-    <Label x:Name="DirectLocationText"/>
-    <Label Text="{Binding VisibleRegion.Center.Longitude}"></Label>
-    <Label Text="{Binding VisibleRegion.Center.Latitude}"></Label>
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto"/>
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>
+      <Label Grid.Row="0" Grid.Column="0" Text="Longitude:"/>
+      <Label Grid.Row="0" Grid.Column="1" Text="{Binding VisibleRegion.Center.Longitude}"/>
+      <Label Grid.Row="1" Grid.Column="0" Text="Latitude:"/>
+      <Label Grid.Row="1" Grid.Column="1" Text="{Binding VisibleRegion.Center.Latitude}"/>
+    </Grid>
+    <Button Text="Move to Tokyo" Command="{Binding MoveToTokyoCommand}"/>
     <googleMaps:Map x:Name="MyMap" HorizontalOptions="Fill" VerticalOptions="FillAndExpand">
       <googleMaps:Map.Behaviors>
-        <bindings:BindingVisibleRegionBehavior Value="{Binding VisibleRegion}"/>
+        <bindings:BindingVisibleRegionBehavior Value="{Binding VisibleRegion, Mode=TwoWay}"/>
+        <bindings:MoveToRegionBehavior Request="{Binding Request}"/>
       </googleMaps:Map.Behaviors>
     </googleMaps:Map>
   </StackLayout>

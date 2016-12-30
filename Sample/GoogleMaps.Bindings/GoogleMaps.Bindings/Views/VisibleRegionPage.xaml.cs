@@ -5,22 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace GoogleMaps.Bindings.Views
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class VisibleRegionPage : ContentPage
     {
         public VisibleRegionPage()
         {
             InitializeComponent();
-            MyMap.PropertyChanged += (sender, args) =>
-            {
-                if (args.PropertyName == "VisibleRegion")
-                {
-                    var center = MyMap.VisibleRegion.Center;
-                    DirectLocationText.Text = $"{center.Longitude}, {center.Latitude}";
-                }
-            };
         }
     }
 }
