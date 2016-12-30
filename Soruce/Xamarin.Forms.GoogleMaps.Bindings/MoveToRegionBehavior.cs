@@ -2,19 +2,14 @@
 {
     public class MoveToRegionBehavior : BehaviorBase<Map>
     {
-        public static readonly BindableProperty RequestProperty = BindableProperty.Create("Request", typeof(MoveToRegionRequest), typeof(BindingVisibleRegionBehavior), default(MoveToRegionRequest), propertyChanged:OnRegionChanged);
+        public static readonly BindableProperty RequestProperty = BindableProperty.Create("Request", typeof(MoveToRegionRequest), typeof(BindingVisibleRegionBehavior), default(MoveToRegionRequest), propertyChanged:OnRequestChanged);
 
-        public MoveToRegionRequest Request
+        private static void OnRequestChanged(BindableObject bindable, object oldValue, object newValue)
         {
-            get { return (MoveToRegionRequest)GetValue(RequestProperty); }
-            set { SetValue(RequestProperty, value); }
-        }
-        private static void OnRegionChanged(BindableObject bindable, object oldValue, object newValue)
-        {
-            ((MoveToRegionBehavior)bindable).OnRegionChanged(oldValue as MoveToRegionRequest, newValue as MoveToRegionRequest);
+            ((MoveToRegionBehavior)bindable).OnRequestChanged(oldValue as MoveToRegionRequest, newValue as MoveToRegionRequest);
         }
 
-        private void OnRegionChanged(MoveToRegionRequest oldValue, MoveToRegionRequest newValue)
+        private void OnRequestChanged(MoveToRegionRequest oldValue, MoveToRegionRequest newValue)
         {
             if (oldValue != null)
             {
