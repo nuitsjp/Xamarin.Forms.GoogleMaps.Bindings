@@ -12,9 +12,11 @@
   <StackLayout HorizontalOptions="Fill" VerticalOptions="Fill" Spacing="5">
     <Label Text="Location(Direct)" />
     <Label x:Name="DirectLocationText"/>
+    <Label Text="{Binding VisibleRegion.Center.Longitude}"></Label>
+    <Label Text="{Binding VisibleRegion.Center.Latitude}"></Label>
     <googleMaps:Map x:Name="MyMap" HorizontalOptions="Fill" VerticalOptions="FillAndExpand">
       <googleMaps:Map.Behaviors>
-        <bindings:BindingVisibleRegionBehavior/>
+        <bindings:BindingVisibleRegionBehavior Value="{Binding VisibleRegion}"/>
       </googleMaps:Map.Behaviors>
     </googleMaps:Map>
   </StackLayout>

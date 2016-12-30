@@ -14,8 +14,6 @@ namespace GoogleMaps.Bindings
         {
             InitializeComponent();
 
-            var behavior = new BindingVisibleRegionBehavior();
-
             MainPage = new NavigationPage(new MainPage());
         }
 

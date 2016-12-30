@@ -14,8 +14,11 @@ namespace GoogleMaps.Bindings.ViewModels
 
         protected virtual void SetProperty<T>(ref T property, T value, [CallerMemberName] string propertyName = null)
         {
-
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            if (!Equals(property, value))
+            {
+                property = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            }
         }
     }
 }

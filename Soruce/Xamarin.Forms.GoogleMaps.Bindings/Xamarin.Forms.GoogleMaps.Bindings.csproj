@@ -38,6 +38,7 @@
   <ItemGroup>
     <Compile Include="BehaviorBase.cs" />
     <Compile Include="BindingVisibleRegionBehavior.cs" />
+    <Compile Include="PreserveAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
