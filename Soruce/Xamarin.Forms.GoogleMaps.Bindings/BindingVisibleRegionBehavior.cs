@@ -9,7 +9,6 @@ namespace Xamarin.Forms.GoogleMaps.Bindings
 
         public MapSpan Value
         {
-            get { return (MapSpan)GetValue(ValueProperty); }
             set { SetValue(ValueProperty, value); }
         }
 
