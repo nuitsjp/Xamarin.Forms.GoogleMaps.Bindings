@@ -37,7 +37,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="BehaviorBase.cs" />
+    <Compile Include="BindingPinsBehavior.cs" />
     <Compile Include="BindingVisibleRegionBehavior.cs" />
+    <Compile Include="MapClickedToCommandBehavior.cs" />
     <Compile Include="MoveToRegionBehavior.cs" />
     <Compile Include="MoveToRegionRequestedEventArgs.cs" />
     <Compile Include="MoveToRegionRequest.cs" />

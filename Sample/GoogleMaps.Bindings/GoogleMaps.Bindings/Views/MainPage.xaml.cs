@@ -14,5 +14,10 @@ namespace GoogleMaps.Bindings.Views
         {
             Navigation.PushAsync(new VisibleRegionPage());
         }
+
+        private void NavigatePins(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PinsPage());
+        }
     }
 }
