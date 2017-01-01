@@ -6,5 +6,6 @@
   <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
     <Button Text="Visible Region" Clicked="NavigateVisibleRegion" />
     <Button Text="Pins" Clicked="NavigatePins"/>
+    <Button Text="Polylines" Clicked="NavigatePolylines"/>
   </StackLayout>
 </ContentPage>

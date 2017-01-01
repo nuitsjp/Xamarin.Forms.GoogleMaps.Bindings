@@ -19,5 +19,10 @@ namespace GoogleMaps.Bindings.Views
         {
             Navigation.PushAsync(new PinsPage());
         }
+
+        private void NavigatePolylines(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PolylinesPage());
+        }
     }
 }
