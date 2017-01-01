@@ -23,7 +23,7 @@ namespace Xamarin.Forms.GoogleMaps.Bindings
 
         private void OnMapClicked(object sender, MapClickedEventArgs mapClickedEventArgs)
         {
-            Command?.Execute(mapClickedEventArgs.Point);
+            Command?.Execute(mapClickedEventArgs);
         }
     }
 }

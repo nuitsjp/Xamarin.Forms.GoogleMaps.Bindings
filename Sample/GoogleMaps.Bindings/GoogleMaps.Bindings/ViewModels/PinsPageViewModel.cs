@@ -28,21 +28,21 @@ namespace GoogleMaps.Bindings.ViewModels
 
         public ObservableCollection<Pin> Pins { get; set; }
 
-        public Command<Position> MapClickedCommand => new Command<Position>((position) =>
+        public Command<MapClickedEventArgs> MapClickedCommand => new Command<MapClickedEventArgs>((args) =>
         {
             Message = "MapClicked";
             Pin = new Pin
             {
                 Label = $"Pin{Pins.Count}",
-                Position = position,
+                Position = args.Point
             };
             Pins?.Add(Pin);
         });
 
-        public Command<PinClickedEventArgs> PinClickedCommand => new Command<PinClickedEventArgs>(arg =>
+        public Command<PinClickedEventArgs> PinClickedCommand => new Command<PinClickedEventArgs>(args =>
         {
             Message = "PinClicked";
-            Pin = arg.Pin;
+            Pin = args.Pin;
         });
     }
 }
