@@ -39,10 +39,12 @@
     <Compile Include="BehaviorBase.cs" />
     <Compile Include="BindingPinsBehavior.cs" />
     <Compile Include="BindingVisibleRegionBehavior.cs" />
+    <Compile Include="EventToCommandBehaviorBase.cs" />
     <Compile Include="MapClickedToCommandBehavior.cs" />
     <Compile Include="MoveToRegionBehavior.cs" />
     <Compile Include="MoveToRegionRequestedEventArgs.cs" />
     <Compile Include="MoveToRegionRequest.cs" />
+    <Compile Include="PinClickedToCommandBehavior.cs" />
     <Compile Include="PreserveAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
