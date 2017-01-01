@@ -7,5 +7,6 @@
     <Button Text="Visible Region" Clicked="NavigateVisibleRegion" />
     <Button Text="Pins" Clicked="NavigatePins"/>
     <Button Text="Polylines" Clicked="NavigatePolylines"/>
+    <Button Text="Polygons" Clicked="NavigatePolygons"/>
   </StackLayout>
 </ContentPage>

@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="BehaviorBase.cs" />
+    <Compile Include="BindingPolygonsBehavior.cs" />
     <Compile Include="BindingPolylinesBehavior.cs" />
     <Compile Include="BindingPinsBehavior.cs" />
     <Compile Include="BindingVisibleRegionBehavior.cs" />

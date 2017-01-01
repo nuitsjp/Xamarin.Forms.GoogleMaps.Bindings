@@ -24,5 +24,10 @@ namespace GoogleMaps.Bindings.Views
         {
             Navigation.PushAsync(new PolylinesPage());
         }
+
+        private void NavigatePolygons(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PolygonsPage());
+        }
     }
 }
