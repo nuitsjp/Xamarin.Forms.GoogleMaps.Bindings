@@ -10,8 +10,20 @@
   </ContentPage.BindingContext>
   <StackLayout HorizontalOptions="Fill" VerticalOptions="Fill">
     <StackLayout Orientation="Horizontal">
-      <Label Text="Message:"/>
-      <Label Text="{Binding Message}"/>
+      <Label Text="MapClickedCount:"/>
+      <Label Text="{Binding MapClickedCount}"/>
+    </StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Label Text="PinClickedCount:"/>
+      <Label Text="{Binding PinClickedCount}"/>
+    </StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Label Text="SelectedPinChangedCount:"/>
+      <Label Text="{Binding SelectedPinChangedCount}"/>
+    </StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Label Text="PinDragStartCount:"/>
+      <Label Text="{Binding PinDragStartCount}"/>
     </StackLayout>
     <StackLayout Orientation="Horizontal">
       <Label Text="Label:"/>
@@ -25,11 +37,17 @@
       <Label Text="Longitude:"/>
       <Label Text="{Binding Pin.Position.Longitude}"/>
     </StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Label Text="IsDraggable:"/>
+      <Switch IsToggled="{Binding Pin.IsDraggable}"/>
+    </StackLayout>
     <googleMaps:Map VerticalOptions="FillAndExpand">
       <googleMaps:Map.Behaviors>
         <bindings:MapClickedToCommandBehavior Command="{Binding MapClickedCommand}"/>
         <bindings:BindingPinsBehavior Value="{Binding Pins}"/>
         <bindings:PinClickedToCommandBehavior Command="{Binding PinClickedCommand}"/>
+        <bindings:SelectedPinChangedToCommandBehavior Command="{Binding SelectedPinChangedCommand}"/>
+        <bindings:PinDragStartToCommandBehavior Command="{Binding PinDragStartCommand}"/>
       </googleMaps:Map.Behaviors>
     </googleMaps:Map>
   </StackLayout>

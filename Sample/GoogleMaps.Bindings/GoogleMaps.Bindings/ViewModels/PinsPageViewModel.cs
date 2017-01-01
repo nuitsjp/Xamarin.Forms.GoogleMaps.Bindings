@@ -11,13 +11,34 @@ namespace GoogleMaps.Bindings.ViewModels
 {
     public class PinsPageViewModel : ViewModelBase
     {
-        private string _message;
         private Pin _pin;
+        private int _mapClickedCount;
+        private int _pinClickedCount;
+        private int _selectedPinChangedCount;
+        private int _pinDragStartCount;
 
-        public string Message
+        public int MapClickedCount
         {
-            get { return _message; }
-            set { SetProperty(ref _message, value); }
+            get { return _mapClickedCount; }
+            set { SetProperty(ref _mapClickedCount, value); }
+        }
+
+        public int PinClickedCount
+        {
+            get { return _pinClickedCount; }
+            set { SetProperty(ref _pinClickedCount, value); }
+        }
+
+        public int SelectedPinChangedCount
+        {
+            get { return _selectedPinChangedCount; }
+            set { SetProperty(ref _selectedPinChangedCount, value); }
+        }
+
+        public int PinDragStartCount
+        {
+            get { return _pinDragStartCount; }
+            set { SetProperty(ref _pinDragStartCount, value); }
         }
 
         public Pin Pin
@@ -28,21 +49,37 @@ namespace GoogleMaps.Bindings.ViewModels
 
         public ObservableCollection<Pin> Pins { get; set; }
 
-        public Command<MapClickedEventArgs> MapClickedCommand => new Command<MapClickedEventArgs>((args) =>
-        {
-            Message = "MapClicked";
-            Pin = new Pin
+        public Command<MapClickedEventArgs> MapClickedCommand => new Command<MapClickedEventArgs>(
+            args =>
             {
-                Label = $"Pin{Pins.Count}",
-                Position = args.Point
-            };
-            Pins?.Add(Pin);
-        });
+                MapClickedCount++;
+                Pin = new Pin
+                {
+                    Label = $"Pin{Pins.Count}",
+                    Position = args.Point
+                };
+                Pins?.Add(Pin);
+            });
 
-        public Command<PinClickedEventArgs> PinClickedCommand => new Command<PinClickedEventArgs>(args =>
-        {
-            Message = "PinClicked";
-            Pin = args.Pin;
-        });
+        public Command<PinClickedEventArgs> PinClickedCommand => new Command<PinClickedEventArgs>(
+            args =>
+            {
+                PinClickedCount++;
+                Pin = args.Pin;
+            });
+
+        public Command<SelectedPinChangedEventArgs> SelectedPinChangedCommand => new Command<SelectedPinChangedEventArgs>(
+            args =>
+            {
+                SelectedPinChangedCount++;
+                Pin = args.SelectedPin;
+            });
+
+        public Command<PinDragEventArgs> PinDragStartCommand => new Command<PinDragEventArgs>(
+            args =>
+            {
+                PinDragStartCount++;
+                Pin = args.Pin;
+            });
     }
 }
