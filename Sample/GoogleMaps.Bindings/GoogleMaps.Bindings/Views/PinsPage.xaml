@@ -48,7 +48,8 @@
         <bindings:PinClickedToCommandBehavior Command="{Binding PinClickedCommand}"/>
         <bindings:SelectedPinChangedToCommandBehavior Command="{Binding SelectedPinChangedCommand}"/>
         <bindings:PinDragStartToCommandBehavior Command="{Binding PinDragStartCommand}"/>
-        <bindings:PinDraggingToCommandBehavior Command="{Binding PinDraggingStartCommand}"/>
+        <bindings:PinDraggingToCommandBehavior Command="{Binding PinDraggingCommand}"/>
+        <bindings:PinDragEndToCommandBehavior Command="{Binding PinDragEndCommand}"/>
       </googleMaps:Map.Behaviors>
     </googleMaps:Map>
   </StackLayout>

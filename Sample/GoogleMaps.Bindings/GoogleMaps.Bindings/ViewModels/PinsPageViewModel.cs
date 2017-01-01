@@ -82,10 +82,17 @@ namespace GoogleMaps.Bindings.ViewModels
                 Pin = args.Pin;
             });
 
-        public Command<PinDragEventArgs> PinDraggingStartCommand => new Command<PinDragEventArgs>(
+        public Command<PinDragEventArgs> PinDraggingCommand => new Command<PinDragEventArgs>(
             args =>
             {
                 PinDragStatus = "Dragging";
+                Pin = args.Pin;
+            });
+
+        public Command<PinDragEventArgs> PinDragEndCommand => new Command<PinDragEventArgs>(
+            args =>
+            {
+                PinDragStatus = "End";
                 Pin = args.Pin;
             });
     }

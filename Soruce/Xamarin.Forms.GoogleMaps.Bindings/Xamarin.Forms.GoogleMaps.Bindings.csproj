@@ -45,6 +45,7 @@
     <Compile Include="MoveToRegionRequestedEventArgs.cs" />
     <Compile Include="MoveToRegionRequest.cs" />
     <Compile Include="PinClickedToCommandBehavior.cs" />
+    <Compile Include="PinDragEndToCommandBehavior.cs" />
     <Compile Include="PinDraggingToCommandBehavior.cs" />
     <Compile Include="PinDragStartToCommandBehavior.cs" />
     <Compile Include="PreserveAttribute.cs" />
