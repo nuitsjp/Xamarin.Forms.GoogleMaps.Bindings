@@ -9,10 +9,27 @@
     <viewModels:PinsPageViewModel/>
   </ContentPage.BindingContext>
   <StackLayout HorizontalOptions="Fill" VerticalOptions="Fill">
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Message:"/>
+      <Label Text="{Binding Message}"/>
+    </StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Label:"/>
+      <Label Text="{Binding Pin.Label}"/>
+    </StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Latitude:"/>
+      <Label Text="{Binding Pin.Position.Latitude}"/>
+    </StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Longitude:"/>
+      <Label Text="{Binding Pin.Position.Longitude}"/>
+    </StackLayout>
     <googleMaps:Map VerticalOptions="FillAndExpand">
       <googleMaps:Map.Behaviors>
         <bindings:MapClickedToCommandBehavior Command="{Binding MapClickedCommand}"/>
         <bindings:BindingPinsBehavior Value="{Binding Pins}"/>
+        <bindings:PinClickedToCommandBehavior Command="{Binding PinClickedCommand}"/>
       </googleMaps:Map.Behaviors>
     </googleMaps:Map>
   </StackLayout>
