@@ -44,5 +44,10 @@ namespace GoogleMaps.Bindings.Views
         {
             Navigation.PushAsync(new GroundOverlaysPage());
         }
+
+        private void NavigationMapLongClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MapLongClickedPage());
+        }
     }
 }

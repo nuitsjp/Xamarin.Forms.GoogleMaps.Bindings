@@ -11,5 +11,6 @@
     <Button Text="Circles" Clicked="NavigateCircles"/>
     <Button Text="TileLayers" Clicked="NavigateTileLayers"/>
     <Button Text="GroundOverlays" Clicked="NavigationGroundOverlays"/>
+    <Button Text="MapLongClicked" Clicked="NavigationMapLongClicked"/>
   </StackLayout>
 </ContentPage>

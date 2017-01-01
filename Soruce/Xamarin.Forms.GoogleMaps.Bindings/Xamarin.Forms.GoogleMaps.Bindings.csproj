@@ -45,6 +45,7 @@
     <Compile Include="BindingPinsBehavior.cs" />
     <Compile Include="BindingVisibleRegionBehavior.cs" />
     <Compile Include="EventToCommandBehaviorBase.cs" />
+    <Compile Include="MapLongClickedToCommandBehavior.cs" />
     <Compile Include="MapClickedToCommandBehavior.cs" />
     <Compile Include="MoveToRegionBehavior.cs" />
     <Compile Include="MoveToRegionRequestedEventArgs.cs" />
