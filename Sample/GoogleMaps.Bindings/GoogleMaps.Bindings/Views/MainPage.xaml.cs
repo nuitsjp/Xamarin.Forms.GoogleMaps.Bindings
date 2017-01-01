@@ -34,5 +34,10 @@ namespace GoogleMaps.Bindings.Views
         {
             Navigation.PushAsync(new CirclesPage());
         }
+
+        private void NavigateTileLayers(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new TileLayersPage());
+        }
     }
 }

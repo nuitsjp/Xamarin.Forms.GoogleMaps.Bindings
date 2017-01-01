@@ -9,5 +9,6 @@
     <Button Text="Polylines" Clicked="NavigatePolylines"/>
     <Button Text="Polygons" Clicked="NavigatePolygons"/>
     <Button Text="Circles" Clicked="NavigateCircles"/>
+    <Button Text="TileLayers" Clicked="NavigateTileLayers"/>
   </StackLayout>
 </ContentPage>
