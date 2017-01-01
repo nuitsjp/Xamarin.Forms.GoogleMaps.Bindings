@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:GoogleMaps.Bindings.ViewModels;assembly=GoogleMaps.Bindings"
+             xmlns:googleMaps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             xmlns:bindings="clr-namespace:Xamarin.Forms.GoogleMaps.Bindings;assembly=Xamarin.Forms.GoogleMaps.Bindings"
+             x:Class="GoogleMaps.Bindings.Views.CirclesPage">
+  <ContentPage.BindingContext>
+    <viewModels:CirclesPageViewModel/>
+  </ContentPage.BindingContext>
+  <StackLayout HorizontalOptions="Fill" VerticalOptions="Fill">
+    <googleMaps:Map VerticalOptions="FillAndExpand">
+      <googleMaps:Map.Behaviors>
+        <bindings:MapClickedToCommandBehavior Command="{Binding MapClickedCommand}"/>
+        <bindings:BindingCirclesBehavior Value="{Binding Circles}"/>
+      </googleMaps:Map.Behaviors>
+    </googleMaps:Map>
+  </StackLayout>
+</ContentPage>

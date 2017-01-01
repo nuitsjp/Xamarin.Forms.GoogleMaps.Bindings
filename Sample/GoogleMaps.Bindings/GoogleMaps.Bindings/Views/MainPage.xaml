@@ -8,5 +8,6 @@
     <Button Text="Pins" Clicked="NavigatePins"/>
     <Button Text="Polylines" Clicked="NavigatePolylines"/>
     <Button Text="Polygons" Clicked="NavigatePolygons"/>
+    <Button Text="Circles" Clicked="NavigateCircles"/>
   </StackLayout>
 </ContentPage>

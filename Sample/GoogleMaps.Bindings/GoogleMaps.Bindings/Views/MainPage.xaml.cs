@@ -29,5 +29,10 @@ namespace GoogleMaps.Bindings.Views
         {
             Navigation.PushAsync(new PolygonsPage());
         }
+
+        private void NavigateCircles(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new CirclesPage());
+        }
     }
 }
