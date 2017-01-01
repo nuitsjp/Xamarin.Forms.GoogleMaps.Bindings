@@ -39,5 +39,10 @@ namespace GoogleMaps.Bindings.Views
         {
             Navigation.PushAsync(new TileLayersPage());
         }
+
+        private void NavigationGroundOverlays(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new GroundOverlaysPage());
+        }
     }
 }

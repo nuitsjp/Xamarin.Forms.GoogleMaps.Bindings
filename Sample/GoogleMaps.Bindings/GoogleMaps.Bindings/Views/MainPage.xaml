@@ -10,5 +10,6 @@
     <Button Text="Polygons" Clicked="NavigatePolygons"/>
     <Button Text="Circles" Clicked="NavigateCircles"/>
     <Button Text="TileLayers" Clicked="NavigateTileLayers"/>
+    <Button Text="GroundOverlays" Clicked="NavigationGroundOverlays"/>
   </StackLayout>
 </ContentPage>
