@@ -11,9 +11,16 @@ namespace GoogleMaps.Bindings.ViewModels
 {
     public class PinsPageViewModel : ViewModelBase
     {
+        public ObservableCollection<Pin> Pins { get; set; }
+
         public Command<Position> MapClickedCommand => new Command<Position>((position) =>
         {
-            
+            Pins?.Add(
+                new Pin
+                {
+                    Label = $"Pin{Pins.Count}",
+                    Position = position,
+                });
         });
     }
 }
