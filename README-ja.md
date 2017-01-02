@@ -88,6 +88,9 @@ MapClickedToCommandBehaviorで、MapClickedイベントをハンドルし、View
 
 プロパティをバインドするBehaviorはすべて、MapからViewModelへの単方向のバインドのみサポートします。
 
+その他の使用方法は、[GoogleMaps.Bindingsサンプル](https://github.com/nuitsjp/Xamarin.Forms.GoogleMaps.Bindings/tree/master/Sample/GoogleMaps.Bindings/GoogleMaps.Bindings)を参照してください。  
+
+
 ### License
 
 See [LICENSE](LICENSE).
