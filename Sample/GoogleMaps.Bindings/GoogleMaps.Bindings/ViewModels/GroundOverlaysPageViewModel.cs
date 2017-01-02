@@ -14,7 +14,7 @@ namespace GoogleMaps.Bindings.ViewModels
                 var icon = BitmapDescriptorFactory.FromBundle("image01.png");
                 var overlay = new GroundOverlay()
                 {
-                    Bounds = new Bounds(args.Point, new Position(args.Point.Latitude + 0.001d, args.Point.Longitude + 0.001d)),
+                    Bounds = new Bounds(args.Point, new Position(args.Point.Latitude + 0.01d, args.Point.Longitude + 0.01d)),
                     Icon = icon,
                     Transparency = 0.5f,
                     Tag = "THE GROUNDOVERLAY"
