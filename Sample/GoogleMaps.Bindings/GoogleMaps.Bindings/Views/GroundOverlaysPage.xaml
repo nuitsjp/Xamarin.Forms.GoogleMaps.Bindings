@@ -12,7 +12,7 @@
     <googleMaps:Map VerticalOptions="FillAndExpand">
       <googleMaps:Map.Behaviors>
         <bindings:MapClickedToCommandBehavior Command="{Binding MapClickedCommand}"/>
-        <bindings:BindingCirclesBehavior Value="{Binding GroundOverlays}"/>
+        <bindings:BindingGroundOverlaysBehavior Value="{Binding GroundOverlays}"/>
       </googleMaps:Map.Behaviors>
     </googleMaps:Map>
   </StackLayout>
