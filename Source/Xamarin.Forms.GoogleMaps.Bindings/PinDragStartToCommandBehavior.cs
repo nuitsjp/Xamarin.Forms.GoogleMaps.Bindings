@@ -1,6 +1,6 @@
 ﻿namespace Xamarin.Forms.GoogleMaps.Bindings
 {
-    public class PinDragStartToCommandBehavior : EventToCommandBehaviorBase
+    public sealed class PinDragStartToCommandBehavior : EventToCommandBehaviorBase
     {
         protected override void OnAttachedTo(Map bindable)
         {

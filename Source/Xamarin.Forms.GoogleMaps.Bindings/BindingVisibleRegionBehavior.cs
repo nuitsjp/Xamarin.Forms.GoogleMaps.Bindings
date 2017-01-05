@@ -3,7 +3,7 @@
 namespace Xamarin.Forms.GoogleMaps.Bindings
 {
     [Preserve(AllMembers = true)]
-    public class BindingVisibleRegionBehavior : BehaviorBase<Map>
+    public sealed class BindingVisibleRegionBehavior : BehaviorBase<Map>
     {
         private static readonly BindablePropertyKey ValuePropertyKey = BindableProperty.CreateReadOnly("Value", typeof(MapSpan), typeof(BindingVisibleRegionBehavior), default(MapSpan));
 

@@ -2,7 +2,7 @@
 
 namespace Xamarin.Forms.GoogleMaps.Bindings
 {
-    public class BindingPolylinesBehavior : BehaviorBase<Map>
+    public sealed class BindingPolylinesBehavior : BehaviorBase<Map>
     {
         private static readonly BindablePropertyKey ValuePropertyKey = BindableProperty.CreateReadOnly("Value", typeof(ObservableCollection<Polyline>), typeof(BindingPolylinesBehavior), default(ObservableCollection<Polyline>));
 

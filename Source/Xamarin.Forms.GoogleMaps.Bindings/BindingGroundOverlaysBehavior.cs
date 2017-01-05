@@ -2,7 +2,7 @@
 
 namespace Xamarin.Forms.GoogleMaps.Bindings
 {
-    public class BindingGroundOverlaysBehavior : BehaviorBase<Map>
+    public sealed class BindingGroundOverlaysBehavior : BehaviorBase<Map>
     {
         private static readonly BindablePropertyKey ValuePropertyKey = BindableProperty.CreateReadOnly("Value", typeof(ObservableCollection<GroundOverlay>), typeof(BindingGroundOverlaysBehavior), default(ObservableCollection<GroundOverlay>));
 
