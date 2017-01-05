@@ -11,5 +11,9 @@ namespace Xamarin.Forms.GoogleMaps.Bindings
             get { return (ICommand)GetValue(CommandProperty); }
             set { SetValue(CommandProperty, value); }
         }
-    }
+
+		internal EventToCommandBehaviorBase()
+		{
+		}
+	}
 }

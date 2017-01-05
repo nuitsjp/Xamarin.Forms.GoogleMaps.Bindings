@@ -1,6 +1,6 @@
 ﻿namespace Xamarin.Forms.GoogleMaps.Bindings
 {
-    public class MapLongClickedToCommandBehavior : EventToCommandBehaviorBase
+    public sealed class MapLongClickedToCommandBehavior : EventToCommandBehaviorBase
     {
         protected override void OnAttachedTo(Map bindable)
         {

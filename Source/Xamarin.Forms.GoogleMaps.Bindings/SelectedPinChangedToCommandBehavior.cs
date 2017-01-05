@@ -1,6 +1,6 @@
 ﻿namespace Xamarin.Forms.GoogleMaps.Bindings
 {
-    public class SelectedPinChangedToCommandBehavior : EventToCommandBehaviorBase
+    public sealed class SelectedPinChangedToCommandBehavior : EventToCommandBehaviorBase
     {
         protected override void OnAttachedTo(Map bindable)
         {

@@ -2,11 +2,11 @@
 
 namespace Xamarin.Forms.GoogleMaps.Bindings
 {
-    public class MoveToRegionRequestedEventArgs : EventArgs
+	internal sealed class MoveToRegionRequestedEventArgs : EventArgs
     {
-        public MapSpan MapSpan { get; }
+		internal MapSpan MapSpan { get; }
 
-        public MoveToRegionRequestedEventArgs(MapSpan mapSpan)
+		internal MoveToRegionRequestedEventArgs(MapSpan mapSpan)
         {
             MapSpan = mapSpan;
         }

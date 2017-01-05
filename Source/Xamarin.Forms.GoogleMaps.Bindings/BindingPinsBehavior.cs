@@ -2,7 +2,7 @@
 
 namespace Xamarin.Forms.GoogleMaps.Bindings
 {
-    public class BindingPinsBehavior : BehaviorBase<Map>
+    public sealed class BindingPinsBehavior : BehaviorBase<Map>
     {
         private static readonly BindablePropertyKey ValuePropertyKey = BindableProperty.CreateReadOnly("Value", typeof(ObservableCollection<Pin>), typeof(BindingPinsBehavior), default(ObservableCollection<Pin>));
 

@@ -1,8 +1,8 @@
 #![logo](https://nuitsjp.github.io/Xamarin.Forms.GoogleMaps.Bindings/logo.png) Xamarin.Forms.GoogleMaps.Bindings
 
 This library is the MVVM(Bindings) support library for [Xamarin.Forms.GoogleMaps](https://github.com/amay077/Xamarin.Forms.GoogleMaps).  
-Except for some Xamarin.Forms.GoogleMaps officially supports Bindings.  
-To support binding, Xamarin.Forms.GoogleMaps requires broken changes.
+To support binding, Xamarin.Forms.GoogleMaps requires broken changes.  
+For this reason, major change to Xamarin.Forms.GoogleMaps to use it.  
 
 This library provides three types of functions.  
 
@@ -16,15 +16,13 @@ This library provides three types of functions.
 * Install into your PCL project only.  
 * Enable [XAML Compilation](https://developer.xamarin.com/guides/xamarin-forms/xaml/xamlc/)  
 
-If you cannot enable XAML Compilation.
-If you're using iOS, add the following.    
+If you cannot enable XAML Compilation.  
+Add the following.    
 
-* Install the package to your iOS project  
-* Add an initialization process to Appdelegate  
+* Install the package to your Native project  
+* Add an initialization process  
 
 ```cs
-public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-{
     global::Xamarin.Forms.Forms.Init();
     Xamarin.FormsGoogleMaps.Init("your_api_key");
     Xamarin.FormsGoogleMapsBindings.Init(); // Add this line
@@ -81,7 +79,7 @@ public class MainPageViewModel
 </ContentPage>
 ```
 
-BindingPinsBehavior binds the Pins property of the map to ViewModel pins.  
+BindingPinsBehavior binds the Pins property of the map to ViewModel Pins.  
 MapClickedToCommandBehavior handles the Mapclicked event and calls the ViewModel MapClickedCommand.  
 
 Behavior to bind the property supports only the OneWayToSource.  

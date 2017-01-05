@@ -15,7 +15,7 @@ namespace Xamarin.Forms.GoogleMaps.Bindings
         | AttributeTargets.Interface
         | AttributeTargets.Delegate,
         AllowMultiple = true)]
-    public sealed class PreserveAttribute : Attribute
+	internal sealed class PreserveAttribute : Attribute
     {
 
         public bool AllMembers;
