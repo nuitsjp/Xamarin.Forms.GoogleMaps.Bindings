@@ -2,11 +2,15 @@
 
 namespace Xamarin.Forms.GoogleMaps.Bindings
 {
-    public class BehaviorBase<T> : Behavior<T> where T : BindableObject
+	public class BehaviorBase<T> : Behavior<T> where T : BindableObject
     {
         public T AssociatedObject { get; private set; }
 
-        protected override void OnAttachedTo(T bindable)
+		internal BehaviorBase()
+		{
+		}
+
+		protected override void OnAttachedTo(T bindable)
         {
             base.OnAttachedTo(bindable);
             AssociatedObject = bindable;

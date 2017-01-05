@@ -2,7 +2,7 @@
 
 namespace Xamarin.Forms.GoogleMaps.Bindings
 {
-    public sealed class MoveToRegionRequest
+	internal sealed class MoveToRegionRequest
     {
         public event EventHandler<MoveToRegionRequestedEventArgs> MoveToRegionRequested;
 
