@@ -2,7 +2,7 @@
 
 namespace Xamarin.Forms.GoogleMaps.Bindings
 {
-    public class BindingCirclesBehavior : BehaviorBase<Map>
+	public sealed class BindingCirclesBehavior : BehaviorBase<Map>
     {
         private static readonly BindablePropertyKey ValuePropertyKey = BindableProperty.CreateReadOnly("Value", typeof(ObservableCollection<Circle>), typeof(BindingCirclesBehavior), default(ObservableCollection<Circle>));
 
