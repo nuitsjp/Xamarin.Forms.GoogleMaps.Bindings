@@ -11,7 +11,7 @@
     <iconUrl>https://nuitsjp.github.io/Xamarin.Forms.GoogleMaps.Bindings/logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>MVVM(Bindings) Support Library for Xamarin.Forms.GoogleMaps.</description>
-    <releaseNotes>New release.</releaseNotes>
+    <releaseNotes>https://github.com/nuitsjp/Xamarin.Forms.GoogleMaps.Bindings/releases</releaseNotes>
     <copyright>Copyright 2016</copyright>
     <tags>xamarin forms maps xamarinforms xamarinformsmaps xamarin.forms.maps google googlemap</tags>
     <dependencies>
