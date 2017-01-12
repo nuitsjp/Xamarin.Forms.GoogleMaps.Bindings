@@ -1,4 +1,4 @@
-#![logo](https://nuitsjp.github.io/Xamarin.Forms.GoogleMaps.Bindings/logo.png) Xamarin.Forms.GoogleMaps.Bindings
+#![logo](logo.png) Xamarin.Forms.GoogleMaps.Bindings
 
 This library is the MVVM(Bindings) support library for [Xamarin.Forms.GoogleMaps](https://github.com/amay077/Xamarin.Forms.GoogleMaps).  
 To support binding, Xamarin.Forms.GoogleMaps requires broken changes.  
