@@ -1,5 +1,7 @@
 #![logo](logo.png) Xamarin.Forms.GoogleMaps.Bindings
 
+[Japanese Documents](https://github.com/nuitsjp/Xamarin.Forms.GoogleMaps.Bindings/blob/master/README-ja.md)
+
 This library is the MVVM(Bindings) support library for [Xamarin.Forms.GoogleMaps](https://github.com/amay077/Xamarin.Forms.GoogleMaps).  
 To support binding, Xamarin.Forms.GoogleMaps requires broken changes.  
 For this reason, major change to Xamarin.Forms.GoogleMaps to use it.  
