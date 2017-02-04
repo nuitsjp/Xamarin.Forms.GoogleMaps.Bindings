@@ -26,7 +26,7 @@ Add the following.    
 
 ```cs
     global::Xamarin.Forms.Forms.Init();
-    Xamarin.FormsGoogleMaps.Init("your_api_key");
+    Xamarin.FormsGoogleMaps.Init(this, bundle);
     Xamarin.FormsGoogleMapsBindings.Init(); // Add this line
     LoadApplication(new App());
 ```
