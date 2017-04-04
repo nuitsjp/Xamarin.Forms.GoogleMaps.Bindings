@@ -72,7 +72,7 @@ public class MainPageViewModel
   <ContentPage.BindingContext>
     <local:MainPageViewModel/>
   </ContentPage.BindingContext>
-  <googleMaps:Map VerticalOptions="Fill">
+  <googleMaps:Map>
     <googleMaps:Map.Behaviors>
       <bindings:BindingPinsBehavior Value="{Binding Pins}"/>
       <bindings:MapClickedToCommandBehavior Command="{Binding MapClickedCommand}"/>
