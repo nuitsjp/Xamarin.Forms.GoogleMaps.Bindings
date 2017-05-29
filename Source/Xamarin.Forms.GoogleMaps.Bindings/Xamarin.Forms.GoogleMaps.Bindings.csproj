@@ -45,6 +45,7 @@
     <Compile Include="BindingPinsBehavior.cs" />
     <Compile Include="BindingVisibleRegionBehavior.cs" />
     <Compile Include="EventToCommandBehaviorBase.cs" />
+    <Compile Include="InfoWindowClickedToCommandBehavior.cs" />
     <Compile Include="Infrastructure.cs" />
     <Compile Include="MapLongClickedToCommandBehavior.cs" />
     <Compile Include="MapClickedToCommandBehavior.cs" />
@@ -64,8 +65,8 @@
       <HintPath>..\packages\Xamarin.Forms.2.1.0.6529\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Xamarin.Forms.GoogleMaps, Version=1.7.0.4, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xamarin.Forms.GoogleMaps.1.7.0\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Xamarin.Forms.GoogleMaps.dll</HintPath>
+    <Reference Include="Xamarin.Forms.GoogleMaps, Version=1.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.GoogleMaps.1.7.1\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Xamarin.Forms.GoogleMaps.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
