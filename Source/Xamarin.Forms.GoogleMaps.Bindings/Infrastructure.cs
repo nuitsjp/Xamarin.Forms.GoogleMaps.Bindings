@@ -14,6 +14,7 @@ namespace Xamarin
             new BindingPolylinesBehavior();
             new BindingTileLayersBehavior();
             new BindingVisibleRegionBehavior();
+            new InfoWindowClickedToCommandBehavior();
             new MapClickedToCommandBehavior();
             new MapLongClickedToCommandBehavior();
             new MoveToRegionBehavior();

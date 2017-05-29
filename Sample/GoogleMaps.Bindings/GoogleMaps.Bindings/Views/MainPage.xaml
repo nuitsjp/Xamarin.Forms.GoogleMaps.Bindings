@@ -3,14 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GoogleMaps.Bindings.Views.MainPage"
              Title="Menu">
-  <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-    <Button Text="Visible Region" Clicked="NavigateVisibleRegion" />
-    <Button Text="Pins" Clicked="NavigatePins"/>
-    <Button Text="Polylines" Clicked="NavigatePolylines"/>
-    <Button Text="Polygons" Clicked="NavigatePolygons"/>
-    <Button Text="Circles" Clicked="NavigateCircles"/>
-    <Button Text="TileLayers" Clicked="NavigateTileLayers"/>
-    <Button Text="GroundOverlays" Clicked="NavigationGroundOverlays"/>
-    <Button Text="MapLongClicked" Clicked="NavigationMapLongClicked"/>
-  </StackLayout>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Button Text="Visible Region" Clicked="NavigateVisibleRegion" />
+        <Button Text="Pins" Clicked="NavigatePins"/>
+        <Button Text="Polylines" Clicked="NavigatePolylines"/>
+        <Button Text="Polygons" Clicked="NavigatePolygons"/>
+        <Button Text="Circles" Clicked="NavigateCircles"/>
+        <Button Text="TileLayers" Clicked="NavigateTileLayers"/>
+        <Button Text="GroundOverlays" Clicked="NavigationGroundOverlays"/>
+        <Button Text="MapLongClicked" Clicked="NavigationMapLongClicked"/>
+        <Button Text="InfoWindowClicked" Clicked="NavigationInfoWindowClicked"/>
+    </StackLayout>
 </ContentPage>
