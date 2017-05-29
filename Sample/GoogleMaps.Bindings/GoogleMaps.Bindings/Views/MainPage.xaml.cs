@@ -48,5 +48,12 @@ namespace GoogleMaps.Bindings.Views
         {
             Navigation.PushAsync(new MapLongClickedPage());
         }
+
+        private void NavigationInfoWindowClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new InfoWindowClickedPage());
+        }
+
+        
     }
 }
