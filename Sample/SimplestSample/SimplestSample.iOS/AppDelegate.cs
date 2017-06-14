@@ -24,7 +24,6 @@ namespace SimplestSample.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             Xamarin.FormsGoogleMaps.Init("your_api_key");
-            Xamarin.FormsGoogleMapsBindings.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
