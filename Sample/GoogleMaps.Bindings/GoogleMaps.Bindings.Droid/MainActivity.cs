@@ -15,6 +15,7 @@ namespace GoogleMaps.Bindings.Droid
             base.OnCreate(bundle);
 
             Xamarin.Forms.Forms.Init(this, bundle);
+            Xamarin.FormsGoogleMaps.Init(this, bundle);
             LoadApplication(new App());
         }
     }

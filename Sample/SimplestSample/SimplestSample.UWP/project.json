@@ -1,9 +1,8 @@
 ﻿{
   "dependencies": {
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
-    "Xamarin.Forms": "2.3.3.175",
-    "Xamarin.Forms.GoogleMaps": "1.7.0",
-    "Xamarin.Forms.GoogleMaps.Bindings": "1.0.0-pre5"
+    "Xamarin.Forms": "2.3.4.247",
+    "Xamarin.Forms.GoogleMaps": "2.0.0"
   },
   "frameworks": {
     "uap10.0": {}
