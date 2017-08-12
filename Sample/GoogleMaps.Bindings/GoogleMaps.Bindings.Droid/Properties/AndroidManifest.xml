@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="GoogleMaps.Bindings.Droid">
 	<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="25" />
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -7,6 +7,7 @@
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 	<application android:label="GoogleMaps.Bindings.Droid">
-		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="YOUR_API_KEY" />
+		<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyD2XLGc1JjgYAUkIomUWMCrJmeM_hQrRYM" />
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 	</application>
 </manifest>
