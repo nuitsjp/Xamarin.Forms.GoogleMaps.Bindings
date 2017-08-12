@@ -58,5 +58,10 @@ namespace GoogleMaps.Bindings.Views
         {
             Navigation.PushAsync(new AnimateCameraPage());
         }
+
+        private void TakeSnapshotClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new TakeSnapshotPage());
+        }
     }
 }

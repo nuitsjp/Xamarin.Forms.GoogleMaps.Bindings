@@ -46,6 +46,7 @@
     <Compile Include="ViewModels\PinsPageViewModel.cs" />
     <Compile Include="ViewModels\PolygonsPageViewModel.cs" />
     <Compile Include="ViewModels\PolylinesPageViewModel.cs" />
+    <Compile Include="ViewModels\TakeSnapshotPageViewModel.cs" />
     <Compile Include="ViewModels\TileLayersPageViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="ViewModels\VisibleRegionPageViewModel.cs" />
@@ -76,6 +77,9 @@
     </Compile>
     <Compile Include="Views\PolylinesPage.xaml.cs">
       <DependentUpon>PolylinesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TakeSnapshotPage.xaml.cs">
+      <DependentUpon>TakeSnapshotPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\TileLayersPage.xaml.cs">
       <DependentUpon>TileLayersPage.xaml</DependentUpon>
@@ -174,6 +178,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\AnimateCameraPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\TakeSnapshotPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

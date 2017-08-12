@@ -15,6 +15,7 @@
             <Button Text="MapLongClicked" Clicked="NavigationMapLongClicked"/>
             <Button Text="Move Camera" Clicked="MoveCameraClicked"/>
             <Button Text="Animate Camera" Clicked="AnimateCameraClicked"/>
+            <Button Text="Take Snapshot" Clicked="TakeSnapshotClicked"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>
