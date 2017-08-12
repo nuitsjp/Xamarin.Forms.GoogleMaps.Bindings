@@ -7,7 +7,7 @@
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 	<application android:label="GoogleMaps.Bindings.Droid">
-		<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyD2XLGc1JjgYAUkIomUWMCrJmeM_hQrRYM" />
+		<meta-data android:name="com.google.android.geo.API_KEY" android:value="YOUR API KEY" />
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 	</application>
 </manifest>

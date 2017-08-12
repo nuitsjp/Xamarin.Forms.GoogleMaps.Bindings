@@ -4,6 +4,17 @@
     <TargetFramework>netstandard1.0</TargetFramework>
     <PackageTargetFallback>portable-net45+win8+wpa81+wp8</PackageTargetFallback>
     <DebugType>full</DebugType>
+    <Authors>nuits.jp amay077</Authors>
+    <Company>nuits.jp amay077</Company>
+    <PackageLicenseUrl>https://github.com/nuitsjp/Xamarin.Forms.GoogleMaps.Bindings/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/nuitsjp/Xamarin.Forms.GoogleMaps.Bindings</PackageProjectUrl>
+    <PackageIconUrl>https://nuitsjp.github.io/Xamarin.Forms.GoogleMaps.Bindings/logo.png</PackageIconUrl>
+    <Description>MVVM(Bindings) Support Library for Xamarin.Forms.GoogleMaps.</Description>
+    <PackageReleaseNotes>https://github.com/nuitsjp/Xamarin.Forms.GoogleMaps.Bindings/releases</PackageReleaseNotes>
+    <Copyright>Copyright 2017</Copyright>
+    <PackageTags>xamarin forms maps xamarinforms xamarinformsmaps xamarin.forms.maps google googlemap</PackageTags>
+    <Version>2.1.0</Version>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="2.3.4.247" />
