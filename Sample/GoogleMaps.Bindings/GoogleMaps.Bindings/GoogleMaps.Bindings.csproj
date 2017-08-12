@@ -41,6 +41,7 @@
     <Compile Include="ViewModels\CirclesPageViewModel.cs" />
     <Compile Include="ViewModels\GroundOverlaysPageViewModel.cs" />
     <Compile Include="ViewModels\MapLongClickedPageViewModel.cs" />
+    <Compile Include="ViewModels\MoveCameraPageViewModel.cs" />
     <Compile Include="ViewModels\PinsPageViewModel.cs" />
     <Compile Include="ViewModels\PolygonsPageViewModel.cs" />
     <Compile Include="ViewModels\PolylinesPageViewModel.cs" />
@@ -59,6 +60,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\MapLongClickedPage.xaml.cs">
       <DependentUpon>MapLongClickedPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MoveCameraPage.xaml.cs">
+      <DependentUpon>MoveCameraPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PinsPage.xaml.cs">
       <DependentUpon>PinsPage.xaml</DependentUpon>
@@ -157,6 +161,12 @@
       <Project>{dd9ac353-60c8-4e67-bd8c-be98c6814357}</Project>
       <Name>Xamarin.Forms.GoogleMaps.Bindings</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\MoveCameraPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ProjectExtensions>

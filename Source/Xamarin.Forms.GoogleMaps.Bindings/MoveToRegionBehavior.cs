@@ -5,7 +5,7 @@ namespace Xamarin.Forms.GoogleMaps.Bindings
     [Preserve(AllMembers = true)]
     public sealed class MoveToRegionBehavior : BehaviorBase<Map>
     {
-        public static readonly BindableProperty RequestProperty = BindableProperty.Create("Request", typeof(MoveToRegionRequest), typeof(BindingVisibleRegionBehavior), default(MoveToRegionRequest), propertyChanged:OnRequestChanged);
+        public static readonly BindableProperty RequestProperty = BindableProperty.Create("Request", typeof(MoveToRegionRequest), typeof(MoveToRegionBehavior), default(MoveToRegionRequest), propertyChanged:OnRequestChanged);
 
         private static void OnRequestChanged(BindableObject bindable, object oldValue, object newValue)
         {

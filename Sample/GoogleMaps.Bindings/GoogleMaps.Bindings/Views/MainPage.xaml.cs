@@ -48,5 +48,10 @@ namespace GoogleMaps.Bindings.Views
         {
             Navigation.PushAsync(new MapLongClickedPage());
         }
+
+        private void MoveCameraClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MoveCameraPage());
+        }
     }
 }
