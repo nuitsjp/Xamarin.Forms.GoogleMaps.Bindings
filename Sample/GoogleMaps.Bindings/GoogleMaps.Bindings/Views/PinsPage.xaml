@@ -5,52 +5,57 @@
              xmlns:bindings="clr-namespace:Xamarin.Forms.GoogleMaps.Bindings;assembly=Xamarin.Forms.GoogleMaps.Bindings"
              xmlns:viewModels="clr-namespace:GoogleMaps.Bindings.ViewModels;assembly=GoogleMaps.Bindings"
              x:Class="GoogleMaps.Bindings.Views.PinsPage">
-  <ContentPage.BindingContext>
-    <viewModels:PinsPageViewModel/>
-  </ContentPage.BindingContext>
-  <StackLayout HorizontalOptions="Fill" VerticalOptions="Fill">
-    <StackLayout Orientation="Horizontal">
-      <Label Text="MapClickedCount:"/>
-      <Label Text="{Binding MapClickedCount}"/>
+    <ContentPage.BindingContext>
+        <viewModels:PinsPageViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout HorizontalOptions="Fill" VerticalOptions="Fill">
+        <StackLayout Orientation="Horizontal">
+            <Label Text="MapClickedCount:"/>
+            <Label Text="{Binding MapClickedCount}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="PinClickedCount:"/>
+            <Label Text="{Binding PinClickedCount}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="SelectedPinChangedCount:"/>
+            <Label Text="{Binding SelectedPinChangedCount}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="SelectedPinChangedCount:"/>
+            <Label Text="{Binding InfoWindowClickedCount}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="PinDragStatus:"/>
+            <Label Text="{Binding PinDragStatus}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Label:"/>
+            <Label Text="{Binding Pin.Label}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Latitude:"/>
+            <Label Text="{Binding Pin.Position.Latitude}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Longitude:"/>
+            <Label Text="{Binding Pin.Position.Longitude}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="IsDraggable:"/>
+            <Switch IsToggled="{Binding Pin.IsDraggable}"/>
+        </StackLayout>
+        <googleMaps:Map VerticalOptions="FillAndExpand">
+            <googleMaps:Map.Behaviors>
+                <bindings:MapClickedToCommandBehavior Command="{Binding MapClickedCommand}"/>
+                <bindings:BindingPinsBehavior Value="{Binding Pins}"/>
+                <bindings:PinClickedToCommandBehavior Command="{Binding PinClickedCommand}"/>
+                <bindings:SelectedPinChangedToCommandBehavior Command="{Binding SelectedPinChangedCommand}"/>
+                <bindings:InfoWindowClickedToCommandBehavior Command="{Binding InfoWindowClickedCommand}"/>
+                <bindings:PinDragStartToCommandBehavior Command="{Binding PinDragStartCommand}"/>
+                <bindings:PinDraggingToCommandBehavior Command="{Binding PinDraggingCommand}"/>
+                <bindings:PinDragEndToCommandBehavior Command="{Binding PinDragEndCommand}"/>
+            </googleMaps:Map.Behaviors>
+        </googleMaps:Map>
     </StackLayout>
-    <StackLayout Orientation="Horizontal">
-      <Label Text="PinClickedCount:"/>
-      <Label Text="{Binding PinClickedCount}"/>
-    </StackLayout>
-    <StackLayout Orientation="Horizontal">
-      <Label Text="SelectedPinChangedCount:"/>
-      <Label Text="{Binding SelectedPinChangedCount}"/>
-    </StackLayout>
-    <StackLayout Orientation="Horizontal">
-      <Label Text="PinDragStatus:"/>
-      <Label Text="{Binding PinDragStatus}"/>
-    </StackLayout>
-    <StackLayout Orientation="Horizontal">
-      <Label Text="Label:"/>
-      <Label Text="{Binding Pin.Label}"/>
-    </StackLayout>
-    <StackLayout Orientation="Horizontal">
-      <Label Text="Latitude:"/>
-      <Label Text="{Binding Pin.Position.Latitude}"/>
-    </StackLayout>
-    <StackLayout Orientation="Horizontal">
-      <Label Text="Longitude:"/>
-      <Label Text="{Binding Pin.Position.Longitude}"/>
-    </StackLayout>
-    <StackLayout Orientation="Horizontal">
-      <Label Text="IsDraggable:"/>
-      <Switch IsToggled="{Binding Pin.IsDraggable}"/>
-    </StackLayout>
-    <googleMaps:Map VerticalOptions="FillAndExpand">
-      <googleMaps:Map.Behaviors>
-        <bindings:MapClickedToCommandBehavior Command="{Binding MapClickedCommand}"/>
-        <bindings:BindingPinsBehavior Value="{Binding Pins}"/>
-        <bindings:PinClickedToCommandBehavior Command="{Binding PinClickedCommand}"/>
-        <bindings:SelectedPinChangedToCommandBehavior Command="{Binding SelectedPinChangedCommand}"/>
-        <bindings:PinDragStartToCommandBehavior Command="{Binding PinDragStartCommand}"/>
-        <bindings:PinDraggingToCommandBehavior Command="{Binding PinDraggingCommand}"/>
-        <bindings:PinDragEndToCommandBehavior Command="{Binding PinDragEndCommand}"/>
-      </googleMaps:Map.Behaviors>
-    </googleMaps:Map>
-  </StackLayout>
 </ContentPage>

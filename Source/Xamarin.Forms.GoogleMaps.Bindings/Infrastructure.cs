@@ -22,6 +22,7 @@ namespace Xamarin
             new PinDraggingToCommandBehavior();
             new PinDragEndToCommandBehavior();
             new SelectedPinChangedToCommandBehavior();
+            new InfoWindowClickedToCommandBehavior();
         }
     }
 }

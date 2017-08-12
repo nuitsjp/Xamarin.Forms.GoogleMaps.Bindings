@@ -10,6 +10,7 @@ namespace GoogleMaps.Bindings.ViewModels
         private int _mapClickedCount;
         private int _pinClickedCount;
         private int _selectedPinChangedCount;
+        private int infoWindowClickedCount;
         private string _pinDragStatus;
 
         public int MapClickedCount
@@ -28,6 +29,12 @@ namespace GoogleMaps.Bindings.ViewModels
         {
             get => _selectedPinChangedCount;
             set => SetProperty(ref _selectedPinChangedCount, value);
+        }
+
+        public int InfoWindowClickedCount
+        {
+            get => infoWindowClickedCount;
+            set => SetProperty(ref infoWindowClickedCount, value);
         }
 
         public string PinDragStatus
@@ -68,6 +75,13 @@ namespace GoogleMaps.Bindings.ViewModels
             {
                 SelectedPinChangedCount++;
                 Pin = args.SelectedPin;
+            });
+
+        public Command<InfoWindowClickedEventArgs> InfoWindowClickedCommand => new Command<InfoWindowClickedEventArgs>(
+            args =>
+            {
+                InfoWindowClickedCount++;
+                Pin = args.Pin;
             });
 
         public Command<PinDragEventArgs> PinDragStartCommand => new Command<PinDragEventArgs>(
