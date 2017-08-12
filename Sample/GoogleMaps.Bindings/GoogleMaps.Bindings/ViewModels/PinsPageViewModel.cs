@@ -10,7 +10,8 @@ namespace GoogleMaps.Bindings.ViewModels
         private int _mapClickedCount;
         private int _pinClickedCount;
         private int _selectedPinChangedCount;
-        private int infoWindowClickedCount;
+        private int _infoWindowClickedCount;
+        private int _infoWindowLongClickedCount;
         private string _pinDragStatus;
 
         public int MapClickedCount
@@ -33,8 +34,14 @@ namespace GoogleMaps.Bindings.ViewModels
 
         public int InfoWindowClickedCount
         {
-            get => infoWindowClickedCount;
-            set => SetProperty(ref infoWindowClickedCount, value);
+            get => _infoWindowClickedCount;
+            set => SetProperty(ref _infoWindowClickedCount, value);
+        }
+
+        public int InfoWindowLongClickedCount
+        {
+            get => _infoWindowLongClickedCount;
+            set => SetProperty(ref _infoWindowLongClickedCount, value);
         }
 
         public string PinDragStatus
@@ -81,6 +88,13 @@ namespace GoogleMaps.Bindings.ViewModels
             args =>
             {
                 InfoWindowClickedCount++;
+                Pin = args.Pin;
+            });
+
+        public Command<InfoWindowLongClickedEventArgs> InfoWindowLongClickedCommand => new Command<InfoWindowLongClickedEventArgs>(
+            args =>
+            {
+                InfoWindowLongClickedCount++;
                 Pin = args.Pin;
             });
 

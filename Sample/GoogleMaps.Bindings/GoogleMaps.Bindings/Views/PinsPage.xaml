@@ -22,8 +22,12 @@
             <Label Text="{Binding SelectedPinChangedCount}"/>
         </StackLayout>
         <StackLayout Orientation="Horizontal">
-            <Label Text="SelectedPinChangedCount:"/>
+            <Label Text="InfoWindowClickedCount:"/>
             <Label Text="{Binding InfoWindowClickedCount}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="InfoWindowLongClickedCount:"/>
+            <Label Text="{Binding InfoWindowLongClickedCount}"/>
         </StackLayout>
         <StackLayout Orientation="Horizontal">
             <Label Text="PinDragStatus:"/>
@@ -52,6 +56,7 @@
                 <bindings:PinClickedToCommandBehavior Command="{Binding PinClickedCommand}"/>
                 <bindings:SelectedPinChangedToCommandBehavior Command="{Binding SelectedPinChangedCommand}"/>
                 <bindings:InfoWindowClickedToCommandBehavior Command="{Binding InfoWindowClickedCommand}"/>
+                <bindings:InfoWindowLongClickedToCommandBehavior Command="{Binding InfoWindowLongClickedCommand}"/>
                 <bindings:PinDragStartToCommandBehavior Command="{Binding PinDragStartCommand}"/>
                 <bindings:PinDraggingToCommandBehavior Command="{Binding PinDraggingCommand}"/>
                 <bindings:PinDragEndToCommandBehavior Command="{Binding PinDragEndCommand}"/>
