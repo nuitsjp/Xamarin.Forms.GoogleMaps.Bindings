@@ -25,7 +25,7 @@
       <Label Grid.Row="1" Grid.Column="1" Text="{Binding VisibleRegion.Center.Latitude}"/>
     </Grid>
     <Button Text="Move to Tokyo" Command="{Binding MoveToTokyoCommand}"/>
-    <googleMaps:Map x:Name="MyMap" HorizontalOptions="Fill" VerticalOptions="FillAndExpand">
+    <googleMaps:Map x:Name="MyMap" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" MyLocationEnabled="True">
       <googleMaps:Map.Behaviors>
         <bindings:BindingVisibleRegionBehavior Value="{Binding VisibleRegion}"/>
         <bindings:MoveToRegionBehavior Request="{Binding Request}"/>
