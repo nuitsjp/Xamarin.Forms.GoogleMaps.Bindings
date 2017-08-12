@@ -38,6 +38,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\AnimateCameraPageViewModel.cs" />
     <Compile Include="ViewModels\CirclesPageViewModel.cs" />
     <Compile Include="ViewModels\GroundOverlaysPageViewModel.cs" />
     <Compile Include="ViewModels\MapLongClickedPageViewModel.cs" />
@@ -48,6 +49,9 @@
     <Compile Include="ViewModels\TileLayersPageViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="ViewModels\VisibleRegionPageViewModel.cs" />
+    <Compile Include="Views\AnimateCameraPage.xaml.cs">
+      <DependentUpon>AnimateCameraPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CirclesPage.xaml.cs">
       <DependentUpon>CirclesPage.xaml</DependentUpon>
     </Compile>
@@ -164,6 +168,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\MoveCameraPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\AnimateCameraPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

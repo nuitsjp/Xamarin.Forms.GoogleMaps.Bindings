@@ -53,5 +53,10 @@ namespace GoogleMaps.Bindings.Views
         {
             Navigation.PushAsync(new MoveCameraPage());
         }
+
+        private void AnimateCameraClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AnimateCameraPage());
+        }
     }
 }

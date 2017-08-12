@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:GoogleMaps.Bindings.ViewModels;assembly=GoogleMaps.Bindings"
+             xmlns:googleMaps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             xmlns:bindings="clr-namespace:Xamarin.Forms.GoogleMaps.Bindings;assembly=Xamarin.Forms.GoogleMaps.Bindings"
+             x:Class="GoogleMaps.Bindings.Views.AnimateCameraPage"
+             Title="AnimateCameraPage">
+    <ContentPage.BindingContext>
+        <viewModels:AnimateCameraPageViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout HorizontalOptions="Fill" VerticalOptions="Fill" Spacing="5">
+        <Button Text="Move to Tokyo" Command="{Binding MoveToTokyoCommand}"/>
+        <googleMaps:Map x:Name="MyMap" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" MyLocationEnabled="True">
+            <googleMaps:Map.Behaviors>
+                <bindings:AnimateCameraBehavior Request="{Binding AnimateCameraRequest}"/>
+            </googleMaps:Map.Behaviors>
+        </googleMaps:Map>
+    </StackLayout>
+</ContentPage>

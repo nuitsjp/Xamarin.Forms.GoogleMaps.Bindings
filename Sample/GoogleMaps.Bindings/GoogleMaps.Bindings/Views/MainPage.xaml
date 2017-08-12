@@ -14,6 +14,7 @@
             <Button Text="GroundOverlays" Clicked="NavigationGroundOverlays"/>
             <Button Text="MapLongClicked" Clicked="NavigationMapLongClicked"/>
             <Button Text="Move Camera" Clicked="MoveCameraClicked"/>
+            <Button Text="Animate Camera" Clicked="AnimateCameraClicked"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>
