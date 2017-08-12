@@ -11,8 +11,8 @@ namespace Xamarin.Forms.GoogleMaps.Bindings
         public static readonly BindableProperty ValueProperty = ValuePropertyKey.BindableProperty;
         public ObservableCollection<Polygon> Value
         {
-            get { return (ObservableCollection<Polygon>)GetValue(ValueProperty); }
-            private set { SetValue(ValuePropertyKey, value); }
+            get => (ObservableCollection<Polygon>)GetValue(ValueProperty);
+            private set => SetValue(ValuePropertyKey, value);
         }
 
         protected override void OnAttachedTo(Map bindable)

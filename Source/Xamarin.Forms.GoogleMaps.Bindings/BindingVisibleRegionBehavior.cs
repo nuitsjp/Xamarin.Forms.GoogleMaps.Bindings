@@ -11,8 +11,8 @@ namespace Xamarin.Forms.GoogleMaps.Bindings
         public static readonly BindableProperty ValueProperty = ValuePropertyKey.BindableProperty;
         public MapSpan Value
         {
-            get { return (MapSpan)GetValue(ValueProperty); }
-            private set { SetValue(ValuePropertyKey, value); }
+            get => (MapSpan)GetValue(ValueProperty);
+            private set => SetValue(ValuePropertyKey, value);
         }
 
         protected override void OnAttachedTo(Map bindable)

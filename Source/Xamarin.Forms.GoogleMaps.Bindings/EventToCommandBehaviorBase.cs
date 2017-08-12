@@ -8,8 +8,8 @@ namespace Xamarin.Forms.GoogleMaps.Bindings
 
         protected ICommand Command
         {
-            get { return (ICommand)GetValue(CommandProperty); }
-            set { SetValue(CommandProperty, value); }
+            get => (ICommand)GetValue(CommandProperty);
+            set => SetValue(CommandProperty, value);
         }
 
         internal EventToCommandBehaviorBase()

@@ -1,10 +1,10 @@
-﻿using Xamarin.Forms.GoogleMaps.Bindings;
-
-// ReSharper disable once CheckNamespace
+﻿using System.Diagnostics.CodeAnalysis;
+using Xamarin.Forms.GoogleMaps.Bindings;
 namespace Xamarin
 {
     public static class FormsGoogleMapsBindings
     {
+        [SuppressMessage("ReSharper", "ObjectCreationAsStatement")]
         public static void Init()
         {
             new BindingCirclesBehavior();

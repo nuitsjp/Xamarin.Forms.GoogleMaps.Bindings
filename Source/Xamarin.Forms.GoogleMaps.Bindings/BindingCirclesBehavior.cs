@@ -11,8 +11,8 @@ namespace Xamarin.Forms.GoogleMaps.Bindings
         public static readonly BindableProperty ValueProperty = ValuePropertyKey.BindableProperty;
         public ObservableCollection<Circle> Value
         {
-            get { return (ObservableCollection<Circle>)GetValue(ValueProperty); }
-            private set { SetValue(ValuePropertyKey, value); }
+            get => (ObservableCollection<Circle>)GetValue(ValueProperty);
+            private set => SetValue(ValuePropertyKey, value);
         }
 
         protected override void OnAttachedTo(Map bindable)

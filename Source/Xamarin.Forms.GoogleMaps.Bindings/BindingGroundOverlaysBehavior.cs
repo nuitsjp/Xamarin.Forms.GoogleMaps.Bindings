@@ -11,8 +11,8 @@ namespace Xamarin.Forms.GoogleMaps.Bindings
         public static readonly BindableProperty ValueProperty = ValuePropertyKey.BindableProperty;
         public ObservableCollection<GroundOverlay> Value
         {
-            get { return (ObservableCollection<GroundOverlay>)GetValue(ValueProperty); }
-            private set { SetValue(ValuePropertyKey, value); }
+            get => (ObservableCollection<GroundOverlay>)GetValue(ValueProperty);
+            private set => SetValue(ValuePropertyKey, value);
         }
 
         protected override void OnAttachedTo(Map bindable)
