@@ -1,9 +1,7 @@
 ﻿using System.Collections.ObjectModel;
-using Xamarin.Forms.Internals;
 
 namespace Xamarin.Forms.GoogleMaps.Bindings
 {
-    [Preserve(AllMembers = true)]
     public sealed class BindingTileLayersBehavior : BehaviorBase<Map>
     {
         private static readonly BindablePropertyKey ValuePropertyKey = BindableProperty.CreateReadOnly("Value", typeof(ObservableCollection<TileLayer>), typeof(BindingTileLayersBehavior), default(ObservableCollection<TileLayer>));

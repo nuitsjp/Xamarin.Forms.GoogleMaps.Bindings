@@ -1,8 +1,5 @@
-﻿using Xamarin.Forms.Internals;
-
-namespace Xamarin.Forms.GoogleMaps.Bindings
+﻿namespace Xamarin.Forms.GoogleMaps.Bindings
 {
-    [Preserve(AllMembers = true)]
     public sealed class PinClickedToCommandBehavior : EventToCommandBehaviorBase
     {
         protected override void OnAttachedTo(Map bindable)

@@ -1,7 +1,9 @@
 ﻿using System.Collections.ObjectModel;
+using Xamarin.Forms.Internals;
 
 namespace Xamarin.Forms.GoogleMaps.Bindings
 {
+    [Preserve(AllMembers = true)]
     public sealed class BindingPolylinesBehavior : BehaviorBase<Map>
     {
         private static readonly BindablePropertyKey ValuePropertyKey = BindableProperty.CreateReadOnly("Value", typeof(ObservableCollection<Polyline>), typeof(BindingPolylinesBehavior), default(ObservableCollection<Polyline>));
