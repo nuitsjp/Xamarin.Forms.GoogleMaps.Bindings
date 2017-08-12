@@ -7,12 +7,12 @@ namespace Xamarin.Forms.GoogleMaps.Bindings
 {
     public sealed class MoveCameraRequest
     {
-        public IMoveCameraInvoker MoveCameraInvoker { get; set; }
+        internal MoveCameraBehavior MoveCameraBehavior { get; set; }
         public Task<AnimationStatus> MoveCamera(CameraUpdate cameraUpdate)
         {
-            if(MoveCameraInvoker == null) throw new InvalidOperationException("Not binding to MoveCameraBehavior.");
+            if(MoveCameraBehavior == null) throw new InvalidOperationException("Not binding to MoveCameraBehavior.");
 
-            return MoveCameraInvoker.MoveCamera(cameraUpdate);
+            return MoveCameraBehavior.MoveCamera(cameraUpdate);
         }
     }
 }

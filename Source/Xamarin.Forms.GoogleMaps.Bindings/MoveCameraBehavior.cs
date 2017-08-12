@@ -7,7 +7,7 @@ using Xamarin.Forms.Internals;
 namespace Xamarin.Forms.GoogleMaps.Bindings
 {
     [Preserve(AllMembers = true)]
-    public class MoveCameraBehavior : BehaviorBase<Map>, IMoveCameraInvoker
+    public class MoveCameraBehavior : BehaviorBase<Map>
     {
         public static readonly BindableProperty RequestProperty = BindableProperty.Create("Request", typeof(MoveCameraRequest), typeof(MoveCameraBehavior), null, propertyChanged: OnRequestChanged);
 
@@ -20,11 +20,11 @@ namespace Xamarin.Forms.GoogleMaps.Bindings
         {
             if (oldValue != null)
             {
-                oldValue.MoveCameraInvoker = null;
+                oldValue.MoveCameraBehavior = null;
             }
             if (newValue != null)
             {
-                newValue.MoveCameraInvoker = this;
+                newValue.MoveCameraBehavior = this;
             }
         }
 
