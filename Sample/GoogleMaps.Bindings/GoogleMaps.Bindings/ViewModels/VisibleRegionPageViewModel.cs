@@ -10,8 +10,8 @@ namespace GoogleMaps.Bindings.ViewModels
 
         public MapSpan VisibleRegion
         {
-            get { return _visibleRegion; }
-            set { SetProperty(ref _visibleRegion, value); }
+            get => _visibleRegion;
+            set => SetProperty(ref _visibleRegion, value);
         }
 
         public MoveToRegionRequest Request { get; } = new MoveToRegionRequest();

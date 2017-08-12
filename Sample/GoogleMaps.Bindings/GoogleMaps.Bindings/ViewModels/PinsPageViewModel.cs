@@ -14,32 +14,32 @@ namespace GoogleMaps.Bindings.ViewModels
 
         public int MapClickedCount
         {
-            get { return _mapClickedCount; }
-            set { SetProperty(ref _mapClickedCount, value); }
+            get => _mapClickedCount;
+            set => SetProperty(ref _mapClickedCount, value);
         }
 
         public int PinClickedCount
         {
-            get { return _pinClickedCount; }
-            set { SetProperty(ref _pinClickedCount, value); }
+            get => _pinClickedCount;
+            set => SetProperty(ref _pinClickedCount, value);
         }
 
         public int SelectedPinChangedCount
         {
-            get { return _selectedPinChangedCount; }
-            set { SetProperty(ref _selectedPinChangedCount, value); }
+            get => _selectedPinChangedCount;
+            set => SetProperty(ref _selectedPinChangedCount, value);
         }
 
         public string PinDragStatus
         {
-            get { return _pinDragStatus; }
-            set { SetProperty(ref _pinDragStatus, value); }
+            get => _pinDragStatus;
+            set => SetProperty(ref _pinDragStatus, value);
         }
 
         public Pin Pin
         {
-            get { return _pin; }
-            set { SetProperty(ref _pin, value); }
+            get => _pin;
+            set => SetProperty(ref _pin, value);
         }
 
         public ObservableCollection<Pin> Pins { get; set; }

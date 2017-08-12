@@ -9,8 +9,8 @@ namespace GoogleMaps.Bindings.ViewModels
 
         public int ClickedCount
         {
-            get { return _clickedCount; }
-            set { SetProperty(ref _clickedCount, value); }
+            get => _clickedCount;
+            set => SetProperty(ref _clickedCount, value);
         }
 
         public Command<MapLongClickedEventArgs> MapLongClickedCommand => new Command<MapLongClickedEventArgs>(
