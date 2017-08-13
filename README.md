@@ -1,4 +1,4 @@
-#![logo](logo.png) Xamarin.Forms.GoogleMaps.Bindings
+# ![](logo.png) Xamarin.Forms.GoogleMaps.Bindings
 
 [Japanese Documents](https://github.com/nuitsjp/Xamarin.Forms.GoogleMaps.Bindings/blob/master/README-ja.md)
 
