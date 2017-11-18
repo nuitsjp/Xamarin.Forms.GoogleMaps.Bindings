@@ -1,4 +1,5 @@
-﻿using Android.App;
+﻿using Android;
+using Android.App;
 using Android.Content.PM;
 using Android.OS;
 
@@ -7,12 +8,19 @@ namespace GoogleMaps.Bindings.Droid
     [Activity(Label = "GoogleMaps.Bindings", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
+        private static string[] _initialPerms ={
+            Manifest.Permission.AccessFineLocation,
+            Manifest.Permission.AccessCoarseLocation
+        };
+
         protected override void OnCreate(Bundle bundle)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
+
+            RequestPermissions(_initialPerms, 1337);
 
             Xamarin.Forms.Forms.Init(this, bundle);
             Xamarin.FormsGoogleMaps.Init(this, bundle);
