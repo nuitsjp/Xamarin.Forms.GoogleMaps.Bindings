@@ -15,7 +15,7 @@
     <PackageReleaseNotes>https://github.com/nuitsjp/Xamarin.Forms.GoogleMaps.Bindings/releases</PackageReleaseNotes>
     <Copyright>Copyright 2017 nuits.jp</Copyright>
     <PackageTags>xamarin forms maps xamarinforms xamarinformsmaps xamarin.forms.maps google googlemap</PackageTags>
-    <Version>2.1.0</Version>
+    <Version>2.2.0</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>
