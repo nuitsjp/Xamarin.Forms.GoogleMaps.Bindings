@@ -28,7 +28,9 @@ namespace Xamarin.Forms.GoogleMaps.Bindings
         {
             if (moveToRegionRequestedEventArgs.MapSpan != null)
             {
-                AssociatedObject.MoveToRegion(moveToRegionRequestedEventArgs.MapSpan);
+                AssociatedObject.MoveToRegion(
+                    moveToRegionRequestedEventArgs.MapSpan, 
+                    moveToRegionRequestedEventArgs.Animated);
             }
         }
     }

@@ -16,6 +16,8 @@
             <Button Text="Move Camera" Clicked="MoveCameraClicked"/>
             <Button Text="Animate Camera" Clicked="AnimateCameraClicked"/>
             <Button Text="Take Snapshot" Clicked="TakeSnapshotClicked"/>
+            <Button Text="Update Region" Clicked="UpdateRegionClicked"/>
+            <Button Text="Update Camera" Clicked="UpdateCameraClicked"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>

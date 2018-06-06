@@ -63,5 +63,15 @@ namespace GoogleMaps.Bindings.Views
         {
             Navigation.PushAsync(new TakeSnapshotPage());
         }
+
+        private void UpdateRegionClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new UpdateRegionPage());
+        }
+
+        private void UpdateCameraClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new UpdateCameraPositionPage());
+        }
     }
 }

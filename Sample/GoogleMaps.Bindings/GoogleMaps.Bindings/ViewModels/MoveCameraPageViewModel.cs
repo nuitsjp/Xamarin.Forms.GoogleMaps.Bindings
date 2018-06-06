@@ -20,7 +20,7 @@ namespace GoogleMaps.Bindings.ViewModels
                     17d, // zoom
                     45d, // bearing(rotation)
                     60d // tilt
-                ))); ;
+                )));
         });
     }
 }

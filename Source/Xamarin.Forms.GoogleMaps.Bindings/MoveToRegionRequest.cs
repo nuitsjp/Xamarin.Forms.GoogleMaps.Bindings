@@ -6,9 +6,9 @@ namespace Xamarin.Forms.GoogleMaps.Bindings
     {
         internal event EventHandler<MoveToRegionRequestedEventArgs> MoveToRegionRequested;
 
-        public void MoveToRegion(MapSpan mapSpan)
+        public void MoveToRegion(MapSpan mapSpan, bool animated = true)
         {
-            MoveToRegionRequested?.Invoke(this, new MoveToRegionRequestedEventArgs(mapSpan));
+            MoveToRegionRequested?.Invoke(this, new MoveToRegionRequestedEventArgs(mapSpan, animated));
         }
     }
 }
