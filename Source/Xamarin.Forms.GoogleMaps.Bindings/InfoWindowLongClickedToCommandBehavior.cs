@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xamarin.Forms.Internals;
+﻿using Xamarin.Forms.Internals;
 
 namespace Xamarin.Forms.GoogleMaps.Bindings
 {

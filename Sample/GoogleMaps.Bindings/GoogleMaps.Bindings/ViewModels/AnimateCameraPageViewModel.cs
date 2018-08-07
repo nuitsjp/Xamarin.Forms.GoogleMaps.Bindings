@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.GoogleMaps;
 using Xamarin.Forms.GoogleMaps.Bindings;

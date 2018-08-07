@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="3f2b5466-98ce-402d-b420-251f41f1bc68"
-    Publisher="CN=nuits.jp"
+    Name="fcb83f65-ec9c-4052-83c6-9e57c66bf8bd"
+    Publisher="CN=4641a536-e011-4807-8083-259686091fa9"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="3f2b5466-98ce-402d-b420-251f41f1bc68" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="ec0cc741-fd3e-485c-81be-68815c480690" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>GoogleMaps.Bindings.UWP</DisplayName>
-    <PublisherDisplayName>nuits.jp</PublisherDisplayName>
+    <PublisherDisplayName>4641a536-e011-4807-8083-259686091fa9</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -37,7 +37,13 @@
         Square44x44Logo="Assets\Square44x44Logo.png"
         Description="GoogleMaps.Bindings.UWP"
         BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\LargeTile.png" Square71x71Logo="Assets\SmallTile.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="wide310x150Logo" />
+            <uap:ShowOn Tile="square310x310Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
     </Application>

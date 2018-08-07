@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <PackageTargetFallback>portable-net45+win8+wpa81+wp8</PackageTargetFallback>
     <DebugType>full</DebugType>
     <Product>Xamarin.Forms.GoogleMaps.Bindings</Product>
@@ -18,9 +18,9 @@
     <Version>2.2.0</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
+
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="2.3.4.247" />
-    <PackageReference Include="Xamarin.Forms.GoogleMaps" Version="2.1.0" />
+    <PackageReference Include="Xamarin.Forms.GoogleMaps" Version="3.0.1" />
   </ItemGroup>
 
 </Project>
