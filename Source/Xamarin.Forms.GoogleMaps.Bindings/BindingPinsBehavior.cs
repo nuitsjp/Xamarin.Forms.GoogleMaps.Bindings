@@ -15,6 +15,18 @@ namespace Xamarin.Forms.GoogleMaps.Bindings
             private set => SetValue(ValuePropertyKey, value);
         }
 
+        BindingBase _itemSource;
+        public BindingBase ItemSource
+        {
+            get { return _itemSource; }
+            set
+            {
+                _itemSource = value;
+                SetBinding(ValueProperty, value);
+                OnPropertyChanged();
+            }
+        }
+
         protected override void OnAttachedTo(Map bindable)
         {
             base.OnAttachedTo(bindable);

@@ -17,6 +17,7 @@
     <PackageTags>xamarin forms maps xamarinforms xamarinformsmaps xamarin.forms.maps google googlemap</PackageTags>
     <Version>2.2.0</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackOnBuild>true</PackOnBuild>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="2.3.4.247" />
