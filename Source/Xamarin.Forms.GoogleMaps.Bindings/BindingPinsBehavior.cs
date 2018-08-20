@@ -12,7 +12,7 @@ namespace Xamarin.Forms.GoogleMaps.Bindings
         public ObservableCollection<Pin> Value
         {
             get => (ObservableCollection<Pin>)GetValue(ValueProperty);
-            private set => SetValue(ValuePropertyKey, value);
+            set => SetValue(ValuePropertyKey, value);
         }
 
         protected override void OnAttachedTo(Map bindable)
