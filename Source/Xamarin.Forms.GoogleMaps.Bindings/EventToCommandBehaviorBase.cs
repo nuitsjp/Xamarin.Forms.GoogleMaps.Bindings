@@ -6,7 +6,7 @@ namespace Xamarin.Forms.GoogleMaps.Bindings
     {
         public static readonly BindableProperty CommandProperty = BindableProperty.Create("Command", typeof(ICommand), typeof(MapClickedToCommandBehavior), default(ICommand));
 
-        protected ICommand Command
+        public ICommand Command
         {
             get => (ICommand)GetValue(CommandProperty);
             set => SetValue(CommandProperty, value);
