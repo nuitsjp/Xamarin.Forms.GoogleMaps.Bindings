@@ -1,3 +1,7 @@
+This maintenance is currently suspended.
+
+This is because developers can't take the time because of private changes. If you are a new user, please consider fork and managing it yourself.
+
 # ![](logo.png) Xamarin.Forms.GoogleMaps.Bindings
 
 [Japanese Documents](https://github.com/nuitsjp/Xamarin.Forms.GoogleMaps.Bindings/blob/master/README-ja.md)
