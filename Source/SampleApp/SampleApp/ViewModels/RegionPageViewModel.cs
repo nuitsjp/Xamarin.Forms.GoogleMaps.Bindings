@@ -4,13 +4,13 @@ using Xamarin.Forms.GoogleMaps.Bindings;
 
 namespace SampleApp.ViewModels
 {
-    public class VisibleRegionPageViewModel : ViewModelBase
+    public class RegionPageViewModel : ViewModelBase
     {
-        private MapSpan _visibleRegion;
-        public MapSpan VisibleRegion
+        private MapRegion _region;
+        public MapRegion Region
         {
-            get => _visibleRegion;
-            set => SetProperty(ref _visibleRegion, value);
+            get => _region;
+            set => SetProperty(ref _region, value);
         }
 
         private bool _animated = true;

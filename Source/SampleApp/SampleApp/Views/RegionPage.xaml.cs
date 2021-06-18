@@ -1,8 +1,8 @@
 ﻿namespace SampleApp.Views
 {
-    public partial class VisibleRegionPage
+    public partial class RegionPage
     {
-        public VisibleRegionPage()
+        public RegionPage()
         {
             InitializeComponent();
         }

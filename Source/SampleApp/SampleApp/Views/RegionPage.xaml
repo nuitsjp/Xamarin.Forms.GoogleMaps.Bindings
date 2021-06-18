@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:googleMaps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             xmlns:bindings="clr-namespace:Xamarin.Forms.GoogleMaps.Bindings;assembly=Xamarin.Forms.GoogleMaps.Bindings"
+             xmlns:viewModels="clr-namespace:SampleApp.ViewModels;assembly=SampleApp"
+             x:Class="SampleApp.Views.RegionPage"
+             Title="Region">
+    <ContentPage.BindingContext>
+        <viewModels:RegionPageViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout HorizontalOptions="Fill" VerticalOptions="Fill" Spacing="5">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Text="NearLeft:"/>
+            <Label Grid.Row="0" Grid.Column="1" Text="{Binding Region.NearLeft.Longitude}"/>
+            <Label Grid.Row="0" Grid.Column="2" Text=", "/>
+            <Label Grid.Row="0" Grid.Column="3" Text="{Binding Region.NearLeft.Latitude}"/>
+            <Label Grid.Row="1" Grid.Column="0" Text="NearRight:"/>
+            <Label Grid.Row="1" Grid.Column="1" Text="{Binding Region.NearRight.Longitude}"/>
+            <Label Grid.Row="1" Grid.Column="2" Text=", "/>
+            <Label Grid.Row="1" Grid.Column="3" Text="{Binding Region.NearRight.Latitude}"/>
+            <Label Grid.Row="2" Grid.Column="0" Text="FarLeft:"/>
+            <Label Grid.Row="2" Grid.Column="1" Text="{Binding Region.FarLeft.Longitude}"/>
+            <Label Grid.Row="2" Grid.Column="2" Text=", "/>
+            <Label Grid.Row="2" Grid.Column="3" Text="{Binding Region.FarLeft.Latitude}"/>
+            <Label Grid.Row="3" Grid.Column="0" Text="FarRight:"/>
+            <Label Grid.Row="3" Grid.Column="1" Text="{Binding Region.FarRight.Longitude}"/>
+            <Label Grid.Row="3" Grid.Column="2" Text=", "/>
+            <Label Grid.Row="3" Grid.Column="3" Text="{Binding Region.FarRight.Latitude}"/>
+            <Label Grid.Row="4" Grid.Column="0" Text="Animated:"/>
+            <Switch Grid.Row="4" Grid.Column="1" IsToggled="{Binding Animated}"/>
+        </Grid>
+        <Button Text="Move to Tokyo" Command="{Binding MoveToTokyoCommand}"/>
+        <googleMaps:Map x:Name="MyMap" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" MyLocationEnabled="True">
+            <googleMaps:Map.Behaviors>
+                <bindings:BindingRegionBehavior Value="{Binding Region}"/>
+                <bindings:MoveToRegionBehavior Request="{Binding Request}"/>
+            </googleMaps:Map.Behaviors>
+        </googleMaps:Map>
+    </StackLayout>
+</ContentPage>

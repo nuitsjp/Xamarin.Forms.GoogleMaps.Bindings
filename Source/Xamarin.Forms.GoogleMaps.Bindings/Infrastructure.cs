@@ -13,7 +13,10 @@ namespace Xamarin
             new BindingPolygonsBehavior();
             new BindingPolylinesBehavior();
             new BindingTileLayersBehavior();
+#pragma warning disable CS0618 // 型またはメンバーが旧型式です
             new BindingVisibleRegionBehavior();
+#pragma warning restore CS0618 // 型またはメンバーが旧型式です
+            new BindingRegionBehavior();
             new MapClickedToCommandBehavior();
             new MapLongClickedToCommandBehavior();
             new MoveToRegionBehavior();

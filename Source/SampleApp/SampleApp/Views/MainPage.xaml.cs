@@ -23,11 +23,6 @@ namespace SampleApp.Views
             await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
         }
 
-        private void NavigateVisibleRegion(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new VisibleRegionPage());
-        }
-
         private void NavigatePins(object sender, EventArgs e)
         {
             Navigation.PushAsync(new PinsPage());
@@ -86,6 +81,11 @@ namespace SampleApp.Views
         private void UpdateCameraClicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new UpdateCameraPositionPage());
+        }
+
+        private void NavigateRegion(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new RegionPage());
         }
     }
 }

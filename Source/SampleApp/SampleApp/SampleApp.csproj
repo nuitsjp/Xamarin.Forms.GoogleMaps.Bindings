@@ -20,4 +20,10 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Xamarin.Forms.GoogleMaps.Bindings\Xamarin.Forms.GoogleMaps.Bindings.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\RegionPage.xaml.cs">
+      <DependentUpon>RegionPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>

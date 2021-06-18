@@ -5,7 +5,7 @@
              Title="Menu">
     <ScrollView>
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <Button Text="Visible Region" Clicked="NavigateVisibleRegion" />
+            <Button Text="Region" Clicked="NavigateRegion" />
             <Button Text="Pins" Clicked="NavigatePins"/>
             <Button Text="Polylines" Clicked="NavigatePolylines"/>
             <Button Text="Polygons" Clicked="NavigatePolygons"/>
