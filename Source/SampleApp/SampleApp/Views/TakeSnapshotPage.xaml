@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:googleMaps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             xmlns:bindings="clr-namespace:Xamarin.Forms.GoogleMaps.Bindings;assembly=Xamarin.Forms.GoogleMaps.Bindings"
+             xmlns:viewModels="clr-namespace:SampleApp.ViewModels;assembly=SampleApp"
+             x:Class="SampleApp.Views.TakeSnapshotPage"
+             Title="TakeSnapshotPage">
+    <ContentPage.BindingContext>
+        <viewModels:TakeSnapshotPageViewModel/>
+    </ContentPage.BindingContext>
+    <Grid HorizontalOptions="Fill" VerticalOptions="Fill">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button Text="Take Snapshot" Command="{Binding TakeSnapshotCommand}"/>
+        <googleMaps:Map Grid.Row="1">
+            <googleMaps:Map.Behaviors>
+                <bindings:TakeSnapshotBehavior Request="{Binding TakeSnapshotRequest}"/>
+            </googleMaps:Map.Behaviors>
+        </googleMaps:Map>
+        <Image Grid.Row="3" Source="{Binding ImageSource}"/>
+    </Grid>
+</ContentPage>

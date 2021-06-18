@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:googleMaps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             xmlns:bindings="clr-namespace:Xamarin.Forms.GoogleMaps.Bindings;assembly=Xamarin.Forms.GoogleMaps.Bindings"
+             xmlns:viewModels="clr-namespace:SampleApp.ViewModels;assembly=SampleApp"
+             x:Class="SampleApp.Views.UpdateCameraPositionPage"
+             Title="UpdateCameraPositionPage"
+             Appearing="ContentPage_Appearing">
+    <ContentPage.BindingContext>
+        <viewModels:UpdateCameraPositionPageViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout HorizontalOptions="Fill" VerticalOptions="Fill" Spacing="5">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Text="Animated:"/>
+            <Switch Grid.Column="1" IsToggled="{Binding Animated}"/>
+        </Grid>
+        <Button Text="Move to Tokyo" Command="{Binding MoveToTokyoCommand}"/>
+        <Button Text="Move to Osaka" Command="{Binding MoveToOsakaCommand}"/>
+        <googleMaps:Map x:Name="MyMap" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" MyLocationEnabled="True">
+            <googleMaps:Map.Behaviors>
+                <bindings:UpdateCameraPositionBehavior CameraUpdate="{Binding CameraUpdate}" Duration="{Binding Duration}"/>
+            </googleMaps:Map.Behaviors>
+        </googleMaps:Map>
+    </StackLayout>
+</ContentPage>
