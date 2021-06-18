@@ -15,7 +15,7 @@
   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
   <application android:label="SampleApp.Android" android:theme="@style/MainTheme">
-    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="YOUR_KEY" />
+    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyCNNHMc7araISw6gFu7Iy6EAkbYsUKY-6o" />
     <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
     <!-- Necessary for apps that target Android 9.0 or higher -->
     <uses-library android:name="org.apache.http.legacy" android:required="false" />

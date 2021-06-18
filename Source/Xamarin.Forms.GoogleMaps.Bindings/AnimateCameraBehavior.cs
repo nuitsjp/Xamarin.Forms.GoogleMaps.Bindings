@@ -16,6 +16,12 @@ namespace Xamarin.Forms.GoogleMaps.Bindings
             ((AnimateCameraBehavior)bindable).OnRequestChanged(oldValue as AnimateCameraRequest, newValue as AnimateCameraRequest);
         }
 
+        public AnimateCameraRequest Request
+        {
+            get => (AnimateCameraRequest) GetValue(RequestProperty);
+            set => SetValue(RequestProperty, value);
+        }
+
         private void OnRequestChanged(AnimateCameraRequest oldValue, AnimateCameraRequest newValue)
         {
             if (oldValue != null)

@@ -14,6 +14,12 @@ namespace Xamarin.Forms.GoogleMaps.Bindings
 
         public bool Animated => (bool)GetValue(AnimatedProperty);
 
+        public MapSpan Region
+        {
+            get => (MapSpan) GetValue(RegionProperty);
+            set => SetValue(RegionProperty, value);
+        }
+
         private static void OnRegionChanged(BindableObject bindable, object oldValue, object newValue)
         {
             if (newValue == null) return;

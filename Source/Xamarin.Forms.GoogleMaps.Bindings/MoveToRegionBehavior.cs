@@ -7,6 +7,12 @@ namespace Xamarin.Forms.GoogleMaps.Bindings
     {
         public static readonly BindableProperty RequestProperty = BindableProperty.Create("Request", typeof(MoveToRegionRequest), typeof(MoveToRegionBehavior), default(MoveToRegionRequest), propertyChanged:OnRequestChanged);
 
+        public MoveToRegionRequest Request
+        {
+            get => (MoveToRegionRequest)GetValue(RequestProperty);
+            set => SetValue(RequestProperty, value);
+        }
+
         private static void OnRequestChanged(BindableObject bindable, object oldValue, object newValue)
         {
             ((MoveToRegionBehavior)bindable).OnRequestChanged(oldValue as MoveToRegionRequest, newValue as MoveToRegionRequest);

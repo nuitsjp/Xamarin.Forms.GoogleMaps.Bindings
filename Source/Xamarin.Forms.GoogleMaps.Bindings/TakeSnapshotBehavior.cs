@@ -12,6 +12,12 @@ namespace Xamarin.Forms.GoogleMaps.Bindings
     {
         public static readonly BindableProperty RequestProperty = BindableProperty.Create("Request", typeof(TakeSnapshotRequest), typeof(TakeSnapshotBehavior), null, propertyChanged: OnRequestChanged);
 
+        public TakeSnapshotRequest Request
+        {
+            get => (TakeSnapshotRequest)GetValue(RequestProperty);
+            set => SetValue(RequestProperty, value);
+        }
+
         private static void OnRequestChanged(BindableObject bindable, object oldValue, object newValue)
         {
             ((TakeSnapshotBehavior)bindable).OnRequestChanged(oldValue as TakeSnapshotRequest, newValue as TakeSnapshotRequest);

@@ -14,6 +14,12 @@ namespace Xamarin.Forms.GoogleMaps.Bindings
 
         public TimeSpan? Duration => (TimeSpan?)GetValue(DurationProperty);
 
+        public CameraUpdate CameraUpdate
+        {
+            get => (CameraUpdate)GetValue(CameraUpdateProperty);
+            set => SetValue(CameraUpdateProperty, value);
+        }
+
         private static void OnCameraUpdateChanged(BindableObject bindable, object oldValue, object newValue)
         {
             if (newValue == null) return;
