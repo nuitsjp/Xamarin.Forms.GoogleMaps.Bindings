@@ -1,6 +1,8 @@
-﻿using Xamarin.Forms;
+﻿using System.Windows.Input;
+using Xamarin.Forms;
 using Xamarin.Forms.GoogleMaps;
 using Xamarin.Forms.GoogleMaps.Bindings;
+using System.Threading.Tasks;
 
 namespace SampleApp.ViewModels
 {
@@ -22,7 +24,20 @@ namespace SampleApp.ViewModels
 
         public MoveToRegionRequest Request { get; } = new MoveToRegionRequest();
 
+        ICommand centerOnMapPinCommand;
+        public ICommand CenterOnMapPinCommand =>
+            centerOnMapPinCommand ??
+            (centerOnMapPinCommand = new Command(async () => await ExecuteCenterOnMapPinCommand()));
 
+        private async Task ExecuteCenterOnMapPinCommand()
+        {
+            Request.MoveToRegion(
+                MapSpan.FromCenterAndRadius(
+                    new Position(35.681298, 139.766247),
+                    Distance.FromMeters(500)),
+                Animated);
+
+        }
         public Command MoveToTokyoCommand => new Command(() =>
         {
             Request.MoveToRegion(

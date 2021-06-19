@@ -5,7 +5,8 @@
              xmlns:bindings="clr-namespace:Xamarin.Forms.GoogleMaps.Bindings;assembly=Xamarin.Forms.GoogleMaps.Bindings"
              xmlns:viewModels="clr-namespace:SampleApp.ViewModels;assembly=SampleApp"
              x:Class="SampleApp.Views.RegionPage"
-             Title="Region">
+             Title="Region"
+             Appearing="RegionPage_OnAppearing">
     <ContentPage.BindingContext>
         <viewModels:RegionPageViewModel/>
     </ContentPage.BindingContext>
